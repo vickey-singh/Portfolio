@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/42ca155e14.js" crossorigin="anonymous"></script>
+</head>
+<body>
+   <div id="header">
+    <div class="container">
+        <nav>
+            <img src="Logo.png" class="logo">
+            <ul id="sidemenu">
+
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+
+                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <p>Web Developer</p>
+            <h1>Hi, I'm <span>Vickey</span><br>from India</h1>
+        </div>
+    </div>
+</div>
+<!-- -------------about section-------------- -->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="photo.jpg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me </h1>
+                <p>As a web developer, I’m someone who thrives on solving problems and turning ideas into interactive, user-friendly websites and applications. I have a strong foundation in front-end technologies like HTML, CSS, and JavaScript, and I’m comfortable working with frameworks like React and Vue to build responsive, dynamic interfaces. On the back end, I’m proficient in using Node.js, Express, and Python with Django or Flask to create efficient server-side solutions.
+                <br>
+                    I’m passionate about clean code, performance optimization, and ensuring accessibility across all devices. I also enjoy keeping up with the latest trends and technologies in the web development space, constantly improving my skills to deliver better, faster, and more reliable experiences for users. Whether it's developing a small personal project or a complex enterprise-level web application, I love tackling new challenges and collaborating with others to bring creative ideas to life.</p>
+                    
+                    
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI/UX</span><br>designing web</li>
+                            <li><span>web developer</span><br>designing web</li>
+                            <li><span>app developer</span><br>designing web</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Fresher</span></li>
+                            <!-- <li><span>2021-current</span><br>designing web</li>
+                            <li><span>web developer</span><br>designing web</li>
+                            <li><span>app developer</span><br>designing web</li> -->
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2024-Current</span><br>Persuing MCA from Amity University<br></li>
+                            <li><span>2019-23</span><br>BCA from GLA College with 72%.</li>
+                            <li><span>2019</span><br>Intermediate in PCM from JAC Board with 58%.</li>
+                            <li><span>2017</span><br>Matriculation from CBSE Board with 9 CGPA.</li>
+                        </ul>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- -----------------services--------------- -->
+
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services </h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Web Development</h2>
+                <p>
+                    Currently i didn't worked on any project so please skip this section, its just a demo. 
+                    <br><a href="#">Learn More</a>
+                </p>
+            </div>
+            <div>
+                <i class="fa-solid fa-crop"></i>
+                <h2>ui/ux</h2>
+                <p>
+                    Currently i didn't worked on any project so please skip this section, its just a demo. 
+                    <br><a href="#">Learn More</a>
+                </p>
+            </div>
+            <div>
+                <i class="fa-brands fa-app-store"></i>
+                <h2>app design</h2>
+                <p>
+                    Currently i didn't worked on any project so please skip this section, its just a demo. 
+                    <br><a href="#">Learn More</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- --------------portfolio------------ -->
+
+<div id="portfolio">
+<div class="container">
+    <h1 class="sub-title">My Work </h1>  
+    <div class="work-list">
+        <div class="work">
+            <img src="work1.jpeg">
+            <div class="layer">
+                <h3>social media app</h3>
+                Currently i didn't worked on any project so please skip this section, its just a demo. 
+                <a href="#"><i class="fa-solid fa-square-arrow-up-right"></i></a>
+            </div>
+        </div>
+
+        <div class="work">
+            <img src="work2.jpeg">
+            <div class="layer">
+                <h3>social media app</h3>
+                Currently i didn't worked on any project so please skip this section, its just a demo. 
+                <a href="#"><i class="fa-solid fa-square-arrow-up-right"></i></a>
+            </div>
+        </div>
+
+        <div class="work">
+            <img src="work3.jpeg">
+            <div class="layer">
+                <h3>social media app</h3>
+                Currently i didn't worked on any project so please skip this section, its just a demo. 
+                <a href="#"><i class="fa-solid fa-square-arrow-up-right"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+<a href="#" class="btn">see more</a>
+
+</div>
+<!-- -----------------contact--------------- -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i>vickeykumarsingh.edu@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i>9065059233</p>
+                <div class="social-icons">
+                    <a href="https://github.com/vickey-singh"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/vickey-kumar-singh-528862328/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://www.instagram.com/official_vickey_singh/"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://x.com/Vickey_Singh_"><i class="fa-brands fa-twitter-square"></i></a>
+                </div>
+                <a href="/Users/vickeykumarsingh/Documents/Html/Portfolio/web development resume.pdf" download class="btn btn2">Download CV</a>
+            </div>
+
+<!-- --------------------form------------------ -->
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>&copy; 2025 Vickey Singh. All Rights Reserved.</p>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
