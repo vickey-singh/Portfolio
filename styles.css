@@ -14,7 +14,7 @@ body{
 #header{
     width: 100%;
     height: 100vh;
-    background-image: url(/Users/vickeykumarsingh/Documents/Projects/Portfolio/Background.jpg);
+    background-image: url(Background.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -310,7 +310,7 @@ nav .fa-solid{
 }
 @media only screen and (max-width: 600px){
     #header{
-        background-image: url(/Users/vickeykumarsingh/Documents/Projects/Portfolio/photo2.jpg);
+        background-image: url(photo2.jpg);
     }
     .header-text{
         margin-top: 100%;
