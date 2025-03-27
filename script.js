@@ -23,6 +23,7 @@ function closemenu(){
     sidemenu.style.right = "-200px";
 }
 
+//   ------------ User message section -------------
   const scriptURL = 'https://script.google.com/macros/s/AKfycbxAhOHk32GLD7AcZHWvcL5g7JG2NnkY1_a30k2poBarTJejBvWdKQbJgvKU_r1PBbwpBw/exec'
   const form = document.forms['submit-to-google-sheet']
   const msg = document.getElementById("msg")
