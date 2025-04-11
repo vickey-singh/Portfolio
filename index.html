@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/42ca155e14.js" crossorigin="anonymous"></script>
+</head>
+<body>
+   <div id="header">
+    <div class="container">
+        <nav>
+            <img src="Logo.png" class="logo">
+            <ul id="sidemenu">
+
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+
+                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <p>Web Developer</p>
+            <h1>Hi, I'm <span>Vickey</span><br>from India</h1>
+        </div>
+
+        <!-- ----------typing text----------- -->
+        <div class="typing" id="typeText">
+        </div>
+
+
+    </div>
+</div>
+<!-- -------------about section-------------- -->
+<div id="about">
+    <div class="container">
+        
+            
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me </h1>
+                <p>As a web developer, I’m someone who thrives on solving problems and turning ideas into interactive, user-friendly websites and applications. I have a strong foundation in front-end technologies like HTML, CSS, and JavaScript, and I’m comfortable working with frameworks like React and Vue to build responsive, dynamic interfaces. On the back end, I’m proficient in using Node.js, Express, and Python with Django or Flask to create efficient server-side solutions.
+                <br>
+                    I’m passionate about clean code, performance optimization, and ensuring accessibility across all devices. I also enjoy keeping up with the latest trends and technologies in the web development space, constantly improving my skills to deliver better, faster, and more reliable experiences for users. Whether it's developing a small personal project or a complex enterprise-level web application, I love tackling new challenges and collaborating with others to bring creative ideas to life.</p>
+                    
+                    
+                    <div class="tab-titles">
+                        
+                        <p class="tab-links active-link" onclick="opentab('education')">Education</p>
+                        <p class="tab-links" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                       
+                    </div>
+
+                    <div class="tab-contents active-tab" id="education">
+                        <ul>
+                            <li><span>2024-Ongoing</span><br>Persuing MCA from Amity University<br></li>
+                            <li><span>2019-23</span><br>BCA from GLA College with 72%.</li>
+                            <li><span>2019</span><br>Intermediate in PCM from JAC Board with 78%.</li>
+                            <li><span>2017</span><br>Matriculation from CBSE Board with 9 CGPA.</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents " id="skills">
+                        <ul>
+                            <li><span>Frontend</span><br>HTML5, CSS3, JavaScript (ES6+)
+
+                                <br> Responsive Web Design
+                                
+                                <br>Tailwind CSS
+                                
+                                <br>React.js (Basic to Intermediate)
+                                
+                                <br>Next.js (Pages Router)
+                                
+                                <br>API Integration (REST APIs)</li>
+                                <li><span>Backend (Basics)</span><br>Node.js (Basic understanding)
+
+                                    <br>API handling and data fetching
+                                    
+                                </li>
+                                <li><span>State Management</span><br>Redux Toolkit
+
+                                    <br>React Context API (basic usage)
+                                    
+                                    </li>
+                                    <li><span>Other Skills</span><br>WebSocket (Real-time data handling)
+
+                                        <br>Basic Excel Handling via JavaScript (for storing form data)</li>
+                            <li><span>Version Control</span><br>Git, GitHub</li>
+                            <li><span>Tools & Platforms</span><br>
+                                Netlify (Deployment)
+
+                                <br>VS Code
+                                
+                                <br>Postman (API Testing)</li>
+                            <li><span>Responsive Design</span><br>Mobile-first development, Flexbox, Grid</li>
+                            <li><span>Basic UI/UX Principles</span><br>Wireframing, Color Theory, Typography</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>💼 Freelance Web Developer (Ongoing Personal Project) <br>
+                                Self-Initiated Projects | Remote <br>
+                                Jan 2024 – Present</span><br>Developed CryptoWeather Nexus, a full-stack dashboard app using Next.js, Redux, Tailwind CSS, and multiple APIs like OpenWeatherMap, CoinGecko, NewsData.io, and WebSockets.
+
+                                <br>Implemented real-time crypto updates using WebSocket (CoinCap API) and integrated global weather search with responsive design.
+                                
+                                <br>Built user interface with modular folder structure, fully responsive layouts, and modern animations.
+                                
+                                <br>Deployed project using Netlify with a professional GitHub repository and README for presentation.
+                                
+                                </li>
+                            <li><span>🎬 MovieVerse Hub (Ongoing Personal Project)
+                                <br>Personal Project | Remote
+                                <br>Mar 2025 – Present
+                                
+                                </span><br>Creating a Netflix-style movie and TV show platform with light/dark mode support, dynamic routing, and interactive search.
+
+                                <br>Designed custom UI/UX using Tailwind CSS and React Hooks, inspired by popular OTT platforms.
+                                
+                                <br>Focused on clean code, reusability, and component-driven development.</li>
+                            
+                        </ul>
+                    </div>
+                    
+            </div>
+        
+    </div>
+</div>
+<!-- -----------------services--------------- -->
+
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services </h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Responsive Web Design</h2>
+                <p>
+                    I create modern, mobile-friendly websites that look great on all devices 
+                    using HTML, CSS, Tailwind, and responsive layout techniques.
+                </p>
+            </div>
+            <div>
+                <i class="fa-brands fa-node-js"></i>
+                <h2>Frontend Development</h2>
+                <p>
+                    Clean and interactive user interfaces built using 
+                    JavaScript, React.js, and Next.js. I focus on user experience and performance.
+                </p>
+            </div>
+            <div>
+                <i class="fa-solid fa-masks-theater"></i>
+                <h2>API Integration</h2>
+                <p>
+                    I connect websites to real-time APIs (like Weather, Crypto, Movie DB, etc.)
+                     for dynamic data, using Axios and Fetch.
+                </p>
+            </div>
+            <div>
+                <i class="fa-solid fa-user-secret"></i>
+                <h2>Website Deployment</h2>
+                <p>
+                    I deploy websites on platforms like Netlify and GitHub 
+                    Pages with proper configuration and optimization.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- --------------portfolio------------ -->
+
+<div id="portfolio">
+<div class="container">
+    <h1 class="sub-title">My Work </h1>  
+    <div class="work-list">
+        <div class="work">
+            <img src="work1.jpeg">
+            <div class="layer">
+                <h3>🎬 MovieVerse Hub(Ongoing Personal Project)</h3><br>
+                <p>A Netflix-style movie & TV discovery platform. <br>
+
+                   <br> MovieVerse Hub is a modern, responsive web application that allows users to explore trending movies, TV shows, 
+                    and search content dynamically. Designed with a sleek Netflix-inspired dark theme, 
+                    it offers a cinematic user experience with hover effects, light/dark mode toggle, and responsive layout for all devices.</p>
+                <a href="#"><i class="fa-solid fa-square-arrow-up-right"></i></a>
+            </div>
+        </div>
+
+        <div class="work">
+            <img src="work2.jpeg">
+            <div class="layer">
+                <h3>Guess-The_word</h3>
+                <p>Guess the Word Game is a fun and interactive word-guessing game where players guess words based on hints.
+                    Players earn 10 points for a correct guess and lose 5 points for a wrong one.
+                    The game allows three lives, and upon losing all, the game restarts automatically.</p>
+                <br> 
+                <a href="https://guessthe-word.netlify.app/" target="_blank"><i class="fa-solid fa-square-arrow-up-right"></i></a>
+            </div>
+        </div>
+
+        <div class="work">
+            <img src="work3.jpeg">
+            <div class="layer">
+                <h3>Cryptoweather-Nexus </h3>
+                <p> A real-time dashboard built with Next.js that combines live weather updates, 
+                    cryptocurrency prices, and the latest crypto news. 
+                    Powered by OpenWeatherMap, CoinCap WebSocket, CoinGecko, and NewsData.io APIs. </p>
+                 
+                <a href="https://thecryptoweather-nexus.netlify.app/" target="_blank"><i class="fa-solid fa-square-arrow-up-right"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+<a href="#" class="btn">see more</a>
+
+</div>
+<!-- -----------------contact--------------- -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i>vickeykumarsingh.edu@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i>9065059233</p>
+                <div class="social-icons">
+                    <a href="https://github.com/vickey-singh"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/vickey-kumar-singh-528862328/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://www.instagram.com/official_vickey_singh/"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://x.com/Vickey_Singh_"><i class="fa-brands fa-twitter-square"></i></a>
+                </div>
+                <a href="Resume.html" download class="btn btn2">Download CV</a>
+            </div>
+
+<!-- --------------------form------------------ -->
+<div class="contact-right">
+    <form name="submit-to-google-sheet" autocomplete="on">
+        <input type="text" name="Name" placeholder="Your Name" autocomplete="name" required>
+        <input type="email" name="Email" placeholder="Your Email" autocomplete="email" required>
+        <textarea name="Message" rows="6" placeholder="Your Message" autocomplete="off"></textarea>
+        <button type="submit" class="btn btn2">Submit</button>
+    </form>
+    <span id="msg"></span>
+</div>
+
+        </div>
+    </div>
+    <div class="copyright">
+        <p>&copy; 2025 <span class="brand">Vickey Singh Portfolio</span>. All Rights Reserved.</p>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vickey Kumar Singh - Resume</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      padding: 60px 30px;
+    }
+
+    .resume {
+      max-width: 950px;
+      margin: auto;
+      background: #fff;
+      padding: 50px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.06);
+    }
+
+    h1 {
+      font-size: 32px;
+      font-weight: 600;
+      color: #111827;
+      letter-spacing: 1px;
+    }
+
+    h2 {
+      font-size: 20px;
+      color: #0a66c2;
+      margin-top: 40px;
+      border-bottom: 2px solid #0a66c2;
+      padding-bottom: 6px;
+    }
+
+    p, li {
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    ul {
+      padding-left: 20px;
+      margin-top: 10px;
+    }
+
+    .subtitle {
+      font-size: 16px;
+      color: #6b7280;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 10px;
+      margin-top: 15px;
+      font-size: 14px;
+    }
+
+    .info-grid i {
+      margin-right: 8px;
+      color: #0a66c2;
+    }
+
+    .edu-block {
+      display: flex;
+      justify-content: space-between;
+      padding: 5px 0;
+    }
+
+    a {
+      color: #0a66c2;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+  body {
+    padding: 20px 10px;
+  }
+
+  .resume {
+    padding: 30px 20px;
+    border-radius: 0;
+  }
+
+  h1 {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  p, li {
+    font-size: 14px;
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr;
+    font-size: 13px;
+  }
+
+  .edu-block {
+    flex-direction: column;
+    gap: 6px;
+  }
+}
+
+
+    /* 👇 Print-friendly styling */
+    @media print {
+      body {
+        background-color: white;
+        padding: 0;
+      }
+
+      .resume {
+        box-shadow: none;
+        border-radius: 0;
+        padding: 30px 40px;
+        max-width: 100%;
+      }
+
+      a {
+        color: black;
+        text-decoration: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="resume">
+    <h1>Vickey Kumar Singh</h1>
+    <p class="subtitle">Web Developer</p>
+
+    <h2>Contact</h2>
+    <div class="info-grid">
+      <div><i class="fas fa-phone"></i> 9065059233</div>
+      <div><i class="fas fa-map-marker-alt"></i> Ranchi, Jharkhand, 834001</div>
+      <div><i class="fas fa-envelope"></i> vickeykumarsingh.edu@gmail.com</div>
+      <div><i class="fab fa-github"></i> <a href="https://github.com/vickey-singh">github.com/vickey-singh</a></div>
+      <div><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/vickey-kumar-singh-528862328/">linkedin.com/in/vickey-kumar-singh</a></div>
+      <div><i class="fas fa-globe"></i> <a href="https://github.com/vickey-singh/Portfolio.git">Portfolio</a></div>
+    </div>
+
+    <h2>About Me</h2>
+    <p>
+      I'm a web developer with a passion for building modern, responsive, and real-world web applications. 
+      Experienced in working with frontend tools like HTML, CSS, JavaScript, React, and Tailwind CSS, while also 
+      expanding backend capabilities with Node.js and Express.
+    </p>
+    <p>
+      Known for attention to detail, consistency in learning, and delivering high-quality UI experiences. With hands-on projects like CryptoWeather Nexus and MovieVerse Hub, I'm constantly pushing to evolve as a full-stack developer ready to take on challenging roles in tech.
+    </p>
+
+    <h2>Skills</h2>
+    <ul>
+      <li><strong>Frontend:</strong> HTML, CSS, JavaScript, React, Tailwind CSS</li>
+      <li><strong>Backend:</strong> Node.js, Express.js (learning phase)</li>
+      <li><strong>Tools:</strong> Git, GitHub, Netlify, VS Code, Postman</li>
+      <li><strong>Concepts:</strong> Responsive Design, WebSocket, API Integration, UI/UX basics</li>
+    </ul>
+
+    <h2>Projects</h2>
+
+ <p><i class="fas fa-cloud-sun-rain" style="color:#0a66c2; margin-right:8px;"></i><strong>CryptoWeather Nexus</strong></p>
+    <ul>
+        <li>Real-time dashboard integrating weather, crypto, and news via APIs & WebSockets</li>
+        <li>Tech: Next.js, Redux Toolkit, Tailwind CSS</li>
+        <li><a href="https://github.com/vickey-singh/cryptoweather-nexus.git" target="_blank">GitHub Repo</a> , 
+        <a href="https://thecryptoweather-nexus.netlify.app/" target="_blank">Preview</a></li>
+   </ul>
+
+    <br>
+    <p><i class="fas fa-film" style="color:#0a66c2; margin-right:8px;"></i><strong>MovieVerse Hub</strong></p>
+    <ul>
+       <li>Netflix-style UI with dark/light mode and trending movie explorer</li>
+       <li>Tech: React, Tailwind CSS, TMDB API</li>
+       <li><a href="#" target="_blank">GitHub Repo</a>, Ongoing</li>
+    </ul>
+
+
+    <h2>Education</h2>
+    <div class="edu-block">
+      <div><strong>Amity University</strong> <br>- Master in Computer Application</div>
+      <div>Ongoing</div>
+    </div>
+    <div class="edu-block">
+      <div><strong>Nilamber Pitamber University</strong> <br>- Bachelor in Computer Application</div>
+      <div>2019–2022 <br> 72%</div>
+    </div>
+
+    <h2>Certifications & Courses</h2>
+    <ul>
+      <li>HTML, CSS, JavaScript, Tailwind CSS, React, Next.js, Redux & More - Udemy</li>
+      <li>Node.js, Express, MongoDB & More – Udemy (Ongoing)</li>
+    </ul>
+
+    <h2>Soft Skills</h2>
+    <ul>
+      <li>Teamwork & Collaboration</li>
+      <li>Problem Solving</li>
+      <li>Critical Thinking</li>
+      <li>Adaptability</li>
+    </ul>
+  </div>
+</body>
+
+</html>
