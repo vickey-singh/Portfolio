@@ -1,144 +1,933 @@
-<!-- START OF UPDATED RESUME -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vickey Kumar Singh - Resume</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: 'Inter', sans-serif;
-      background-color: #f9f9f9;
-      color: #333;
-      padding: 60px 30px;
-    }
-    .resume {
-      max-width: 950px;
-      margin: auto;
-      background: #fff;
-      padding: 50px;
-      border-radius: 12px;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.06);
-    }
-    h1 { font-size: 32px; font-weight: 600; color: #111827; letter-spacing: 1px; }
-    h2 {
-      font-size: 20px;
-      color: #0a66c2;
-      margin-top: 40px;
-      border-bottom: 2px solid #0a66c2;
-      padding-bottom: 6px;
-    }
-    p, li { font-size: 15px; line-height: 1.6; }
-    ul { padding-left: 20px; margin-top: 10px; }
-    .subtitle { font-size: 16px; color: #6b7280; }
-    .info-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 10px;
-      margin-top: 15px;
-      font-size: 14px;
-    }
-    .info-grid i { margin-right: 8px; color: #0a66c2; }
-    .edu-block {
-      display: flex;
-      justify-content: space-between;
-      padding: 5px 0;
-    }
-    a { color: #0a66c2; text-decoration: none; }
-    a:hover { text-decoration: underline; }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    @media (max-width: 600px) {
-      body { padding: 20px 10px; }
-      .resume { padding: 30px 20px; border-radius: 0; }
-      h1 { font-size: 24px; text-align: center; }
-      h2 { font-size: 18px; }
-      p, li { font-size: 14px; }
-      .info-grid { grid-template-columns: 1fr; font-size: 13px; }
-      .edu-block { flex-direction: column; gap: 6px; }
-    }
+    <title>Vickey Kumar Singh - Full Stack MERN Developer Resume</title>
 
-    @media print {
-      body { background-color: white; padding: 0; }
-      .resume { box-shadow: none; border-radius: 0; padding: 30px 40px; max-width: 100%; }
-      a { color: black; text-decoration: none; }
-    }
-  </style>
+    <style>
+
+        /* =====================================================
+           RESET
+        ===================================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        /* =====================================================
+           PAGE
+        ===================================================== */
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+
+            background: #eeeeee;
+
+            color: #111111;
+
+            font-size: 10.5pt;
+
+            line-height: 1.45;
+        }
+
+
+        .resume {
+            width: 210mm;
+
+            min-height: 297mm;
+
+            margin: 20px auto;
+
+            padding: 15mm 17mm;
+
+            background: #ffffff;
+        }
+
+
+        /* =====================================================
+           HEADER
+        ===================================================== */
+
+        .name {
+            font-size: 25pt;
+
+            font-weight: 700;
+
+            color: #111111;
+
+            line-height: 1.1;
+
+            margin-bottom: 4px;
+        }
+
+
+        .title {
+            font-size: 12.5pt;
+
+            font-weight: 600;
+
+            color: #333333;
+
+            margin-bottom: 8px;
+        }
+
+
+        .contact {
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 4px 14px;
+
+            font-size: 9.5pt;
+
+            color: #333333;
+
+            margin-bottom: 10px;
+        }
+
+
+        .contact a {
+            color: #111111;
+
+            text-decoration: none;
+        }
+
+
+        .contact span::after {
+            content: "|";
+
+            margin-left: 14px;
+
+            color: #999999;
+        }
+
+
+        .contact span:last-child::after {
+            content: "";
+        }
+
+
+        /* =====================================================
+           SECTION
+        ===================================================== */
+
+        .section {
+            margin-top: 13px;
+        }
+
+
+        .section-title {
+            font-size: 11pt;
+
+            font-weight: 700;
+
+            text-transform: uppercase;
+
+            letter-spacing: 0.5px;
+
+            color: #111111;
+
+            border-bottom: 1px solid #222222;
+
+            padding-bottom: 3px;
+
+            margin-bottom: 7px;
+        }
+
+
+        /* =====================================================
+           SUMMARY
+        ===================================================== */
+
+        .summary {
+            font-size: 10pt;
+
+            line-height: 1.5;
+
+            text-align: justify;
+        }
+
+
+        /* =====================================================
+           SKILLS
+        ===================================================== */
+
+        .skills {
+            font-size: 9.8pt;
+
+            line-height: 1.55;
+        }
+
+
+        .skill-line {
+            margin-bottom: 2px;
+        }
+
+
+        .skill-line strong {
+            font-weight: 700;
+
+            color: #111111;
+        }
+
+
+        /* =====================================================
+           PROJECT
+        ===================================================== */
+
+        .project {
+            margin-bottom: 10px;
+        }
+
+
+        .project:last-child {
+            margin-bottom: 0;
+        }
+
+
+        .project-header {
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: baseline;
+
+            gap: 10px;
+        }
+
+
+        .project-title {
+            font-size: 11pt;
+
+            font-weight: 700;
+
+            color: #111111;
+        }
+
+
+        .project-type {
+            font-size: 9pt;
+
+            color: #555555;
+
+            white-space: nowrap;
+        }
+
+
+        .project-description {
+            margin-top: 2px;
+
+            font-size: 9.7pt;
+
+            color: #333333;
+        }
+
+
+        .project ul {
+            margin-top: 3px;
+
+            padding-left: 17px;
+        }
+
+
+        .project li {
+            margin-bottom: 2px;
+
+            font-size: 9.6pt;
+
+            line-height: 1.42;
+        }
+
+
+        .tech-stack {
+            margin-top: 3px;
+
+            font-size: 9.3pt;
+        }
+
+
+        .links {
+            margin-top: 2px;
+
+            font-size: 9.2pt;
+        }
+
+
+        .links a {
+            color: #111111;
+
+            text-decoration: underline;
+        }
+
+
+        /* =====================================================
+           EDUCATION
+        ===================================================== */
+
+        .education-item {
+            margin-bottom: 7px;
+        }
+
+
+        .education-header {
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: baseline;
+        }
+
+
+        .education-title {
+            font-size: 10.2pt;
+
+            font-weight: 700;
+        }
+
+
+        .education-date {
+            font-size: 9pt;
+
+            color: #555555;
+        }
+
+
+        .education-degree {
+            font-size: 9.5pt;
+
+            color: #333333;
+        }
+
+
+        /* =====================================================
+           CERTIFICATIONS
+        ===================================================== */
+
+        ul.standard {
+            padding-left: 17px;
+        }
+
+
+        ul.standard li {
+            margin-bottom: 2px;
+
+            font-size: 9.6pt;
+        }
+
+
+        /* =====================================================
+           ADDITIONAL
+        ===================================================== */
+
+        .additional {
+            font-size: 9.6pt;
+        }
+
+
+        /* =====================================================
+           MOBILE
+        ===================================================== */
+
+        @media (max-width: 800px) {
+
+            body {
+                background: #ffffff;
+
+                font-size: 10pt;
+            }
+
+
+            .resume {
+                width: 100%;
+
+                min-height: auto;
+
+                margin: 0;
+
+                padding: 25px 20px;
+            }
+
+
+            .name {
+                font-size: 23pt;
+            }
+
+
+            .contact {
+                display: block;
+            }
+
+
+            .contact span {
+                display: block;
+
+                margin-bottom: 3px;
+            }
+
+
+            .contact span::after {
+                content: "";
+            }
+
+
+            .project-header,
+            .education-header {
+                display: block;
+            }
+
+
+            .project-type,
+            .education-date {
+                display: block;
+
+                margin-top: 2px;
+            }
+
+        }
+
+
+        /* =====================================================
+           PRINT / PDF
+        ===================================================== */
+
+        @media print {
+
+            @page {
+                size: A4;
+
+                margin: 8mm;
+            }
+
+
+            body {
+                background: #ffffff;
+
+                font-size: 10pt;
+            }
+
+
+            .resume {
+                width: 100%;
+
+                min-height: auto;
+
+                margin: 0;
+
+                padding: 5mm 8mm;
+            }
+
+
+            a {
+                color: #111111 !important;
+
+                text-decoration: none;
+            }
+
+
+            .section {
+                break-inside: avoid;
+            }
+
+
+            .project {
+                break-inside: avoid;
+            }
+
+
+            .education-item {
+                break-inside: avoid;
+            }
+
+        }
+
+    </style>
+
 </head>
+
+
 <body>
-  <div class="resume">
-    <h1>Vickey Kumar Singh</h1>
-    <p class="subtitle">Full Stack Web Developer</p>
 
-    <h2>Contact</h2>
-    <div class="info-grid">
-      <div><i class="fas fa-phone"></i> 9065059233</div>
-      <div><i class="fas fa-map-marker-alt"></i> Ranchi, Jharkhand, 834001</div>
-      <div><i class="fas fa-envelope"></i> vickeykumarsingh.edu@gmail.com</div>
-      <div><i class="fab fa-github"></i> <a href="https://github.com/vickey-singh">github.com/vickey-singh</a></div>
-      <div><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/vickey-kumar-singh-528862328/">linkedin.com/in/vickey-kumar-singh</a></div>
-      <div><i class="fas fa-globe"></i> <a href="https://vickey-singh.netlify.app/">Portfolio</a></div>
-    </div>
 
-    <h2>About Me</h2>
-    <p>
-      Full Stack Developer with a passion for building scalable, API-driven, and user-centric web applications. Skilled in modern frontend frameworks and backend systems including Django and Node.js. Enthusiastic about DevOps workflows, CI/CD pipelines, and cloud integration (AWS Lambda, SNS, SQS awareness). Actively expanding expertise in scalable architectures, OpenAPI documentation, and database optimization.
-    </p>
+<div class="resume">
 
-    <h2>Skills</h2>
-    <ul>
-      <li><strong>Frontend:</strong> HTML, CSS, JavaScript, React, Next.js, Tailwind CSS, Redux Toolkit</li>
-      <li><strong>Backend:</strong> Node.js, Express.js, Django (Python)</li>
-      <li><strong>Database:</strong> MySQL, PostgreSQL, Sequelize (basic), Schema Design</li>
-      <li><strong>DevOps & Tools:</strong> Git, GitHub, Postman, Netlify, VS Code, OpenAPI/Swagger (basic), CI/CD awareness</li>
-      <li><strong>Cloud & Architecture:</strong> Basic AWS (Lambda, SNS, SQS), REST API standards, WebSocket, Event-driven concepts</li>
-    </ul>
 
-    <h2>Projects</h2>
+    <!-- =================================================
+         HEADER
+    ================================================== -->
 
-    <p><i class="fas fa-cloud-sun-rain" style="color:#0a66c2; margin-right:8px;"></i><strong>CryptoWeather Nexus</strong></p>
-    <ul>
-      <li>Real-time dashboard integrating weather, crypto, and news via APIs & WebSockets</li>
-      <li>Tech: Next.js, Redux Toolkit, Tailwind CSS, REST APIs</li>
-      <li><a href="https://github.com/vickey-singh/cryptoweather-nexus.git" target="_blank">GitHub Repo</a>, 
-          <a href="https://thecryptoweather-nexus.netlify.app/" target="_blank">Preview</a></li>
-    </ul>
+    <header>
 
-    <br>
-    <p><i class="fas fa-graduation-cap" style="color:#0a66c2; margin-right:8px;"></i><strong>EduPortal</strong></p>
-    <ul>
-      <li>Online learning platform with student-teacher dashboard and authentication system</li>
-      <li>Tech: Django (Python), HTML, CSS, JavaScript</li>
-      <li><a href="#">GitHub Repo</a>, Ongoing</li>
-    </ul>
+        <div class="name">
+            Vickey Kumar Singh
+        </div>
 
-    <h2>Education</h2>
-    <div class="edu-block">
-      <div><strong>Amity University</strong> <br>- Master in Computer Application</div>
-      <div>Ongoing</div>
-    </div>
-    <div class="edu-block">
-      <div><strong>Nilamber Pitamber University</strong> <br>- Bachelor in Computer Application</div>
-      <div>2019–2022 <br> 72%</div>
-    </div>
+        <div class="title">
+            Full Stack MERN Developer
+        </div>
 
-    <h2>Certifications & Courses</h2>
-<ul>
-  <li>Full Stack Web Development with React, Next.js, Redux, Tailwind CSS – Udemy</li>
-  <li>Backend Development with Node.js, Express & MongoDB – Udemy</li>
-  <li>Modern JavaScript (ES6+), API Integration & Asynchronous Programming – Udemy</li>
-</ul>
 
-    <h2>Soft Skills</h2>
-    <ul>
-      <li>Problem Solving & Critical Thinking</li>
-      <li>Collaboration & Teamwork</li>
-      <li>Adaptability & Quick Learning</li>
-      <li>Project Ownership & Communication</li>
-    </ul>
-  </div>
+        <div class="contact">
+
+            <span>
+                Ranchi, Jharkhand
+            </span>
+
+            <span>
+                9065059233
+            </span>
+
+            <span>
+                <a href="mailto:vickeykumarsingh.edu@gmail.com">
+                    vickeykumarsingh.edu@gmail.com
+                </a>
+            </span>
+
+            <span>
+                <a
+                    href="https://github.com/vickey-singh"
+                    target="_blank"
+                >
+                    github.com/vickey-singh
+                </a>
+            </span>
+
+            <span>
+                <a
+                    href="https://www.linkedin.com/in/vickey-kumar-singh-528862328/"
+                    target="_blank"
+                >
+                    linkedin.com/in/vickey-kumar-singh
+                </a>
+            </span>
+
+            <span>
+                <a
+                    href="https://vickey-singh.netlify.app/"
+                    target="_blank"
+                >
+                    vickey-singh.netlify.app
+                </a>
+            </span>
+
+        </div>
+
+    </header>
+
+
+    <!-- =================================================
+         SUMMARY
+    ================================================== -->
+
+    <section class="section">
+
+        <div class="section-title">
+            Professional Summary
+        </div>
+
+        <p class="summary">
+
+            Full Stack MERN Developer skilled in building responsive,
+            database-driven web applications using React.js, Node.js,
+            Express.js and MongoDB. Experienced in developing REST APIs,
+            CRUD workflows, authentication, database integration,
+            payment and receipt workflows, and admin dashboards.
+            Developed EduPortal, a real-world institute management
+            system for managing students, courses, fees, payments,
+            receipts, examinations and results. Comfortable with Git,
+            GitHub, Postman and cloud deployment workflows.
+
+        </p>
+
+    </section>
+
+
+    <!-- =================================================
+         TECHNICAL SKILLS
+    ================================================== -->
+
+    <section class="section">
+
+        <div class="section-title">
+            Technical Skills
+        </div>
+
+
+        <div class="skills">
+
+            <div class="skill-line">
+                <strong>Frontend:</strong>
+                HTML5, CSS3, JavaScript (ES6+), React.js,
+                Bootstrap, Tailwind CSS, Responsive Web Design
+            </div>
+
+
+            <div class="skill-line">
+                <strong>Backend:</strong>
+                Node.js, Express.js, REST API Development,
+                Authentication, CRUD Operations, API Integration
+            </div>
+
+
+            <div class="skill-line">
+                <strong>Database:</strong>
+                MongoDB, Mongoose, Database Design,
+                Data Modeling, Querying
+            </div>
+
+
+            <div class="skill-line">
+                <strong>Tools:</strong>
+                Git, GitHub, Postman, VS Code, npm
+            </div>
+
+
+            <div class="skill-line">
+                <strong>Deployment:</strong>
+                Render, Vercel, Netlify
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================================
+         PROJECTS
+    ================================================== -->
+
+    <section class="section">
+
+        <div class="section-title">
+            Projects
+        </div>
+
+
+        <!-- EDUPORTAL -->
+
+        <div class="project">
+
+
+            <div class="project-header">
+
+                <div class="project-title">
+                    EduPortal — Institute Management System
+                </div>
+
+                <div class="project-type">
+                    Full Stack MERN | Client Project
+                </div>
+
+            </div>
+
+
+            <p class="project-description">
+
+                Full-stack institute management application developed
+                for Prerna Institute of Excellence to centralize
+                academic and administrative operations.
+
+            </p>
+
+
+            <ul>
+
+                <li>
+                    Developed a React.js-based admin interface for
+                    managing students, courses, fees, payments,
+                    examinations and results.
+                </li>
+
+                <li>
+                    Built RESTful APIs using Node.js and Express.js
+                    and integrated MongoDB with Mongoose for
+                    persistent data management.
+                </li>
+
+                <li>
+                    Implemented student and academic management
+                    workflows with reusable frontend services
+                    and backend controllers.
+                </li>
+
+                <li>
+                    Developed fee and payment workflows including
+                    transaction records and automated receipt
+                    generation.
+                </li>
+
+                <li>
+                    Implemented examination and result management
+                    functionality for institute administration.
+                </li>
+
+                <li>
+                    Integrated authentication, validation, API
+                    communication and centralized institute settings.
+                </li>
+
+                <li>
+                    Deployed the application using Render and
+                    Vercel-based hosting workflows.
+                </li>
+
+            </ul>
+
+
+            <div class="tech-stack">
+
+                <strong>Technologies:</strong>
+
+                React.js, JavaScript, Node.js, Express.js,
+                MongoDB, Mongoose, REST APIs, HTML5, CSS3,
+                Git, GitHub, Render, Vercel
+
+            </div>
+
+
+            <div class="links">
+
+                <strong>Links:</strong>
+
+                <a
+                    href="https://github.com/vickey-singh/eduportal-mern"
+                    target="_blank"
+                >
+                    GitHub
+                </a>
+
+                |
+
+                <a
+                    href="https://edvora-demo.vercel.app/"
+                    target="_blank"
+                >
+                    Live Demo
+                </a>
+
+                |
+
+                <a
+                    href="https://prernainstituteofexcellence.in"
+                    target="_blank"
+                >
+                    Client Website
+                </a>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- CRYPTOWEATHER -->
+
+        <div class="project">
+
+
+            <div class="project-header">
+
+                <div class="project-title">
+                    CryptoWeather Nexus
+                </div>
+
+                <div class="project-type">
+                    Web Application
+                </div>
+
+            </div>
+
+
+            <p class="project-description">
+
+                Dashboard application integrating cryptocurrency,
+                weather and news data through external APIs.
+
+            </p>
+
+
+            <ul>
+
+                <li>
+                    Integrated multiple REST APIs to retrieve and
+                    display weather, cryptocurrency and news data.
+                </li>
+
+                <li>
+                    Developed responsive dashboard components
+                    using Next.js and Tailwind CSS.
+                </li>
+
+                <li>
+                    Implemented application state management
+                    using Redux Toolkit.
+                </li>
+
+            </ul>
+
+
+            <div class="tech-stack">
+
+                <strong>Technologies:</strong>
+
+                Next.js, JavaScript, Redux Toolkit,
+                Tailwind CSS, REST APIs
+
+            </div>
+
+
+            <div class="links">
+
+                <strong>Links:</strong>
+
+                <a
+                    href="https://github.com/vickey-singh/cryptoweather-nexus.git"
+                    target="_blank"
+                >
+                    GitHub
+                </a>
+
+                |
+
+                <a
+                    href="https://thecryptoweather-nexus.netlify.app/"
+                    target="_blank"
+                >
+                    Live Demo
+                </a>
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+    <!-- =================================================
+         EDUCATION
+    ================================================== -->
+
+    <section class="section">
+
+        <div class="section-title">
+            Education
+        </div>
+
+
+        <div class="education-item">
+
+            <div class="education-header">
+
+                <div class="education-title">
+                    Amity University
+                </div>
+
+                <div class="education-date">
+                    Ongoing
+                </div>
+
+            </div>
+
+
+            <div class="education-degree">
+                Master of Computer Applications (MCA)
+            </div>
+
+        </div>
+
+
+        <div class="education-item">
+
+            <div class="education-header">
+
+                <div class="education-title">
+                    Nilamber Pitamber University
+                </div>
+
+                <div class="education-date">
+                    2019 – 2022
+                </div>
+
+            </div>
+
+
+            <div class="education-degree">
+                Bachelor of Computer Applications (BCA) — 72%
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+    <!-- =================================================
+         CERTIFICATIONS
+    ================================================== -->
+
+    <section class="section">
+
+        <div class="section-title">
+            Certifications & Courses
+        </div>
+
+
+        <ul class="standard">
+
+            <li>
+                Full Stack Web Development with React,
+                Next.js, Redux and Tailwind CSS — Udemy
+            </li>
+
+            <li>
+                Backend Development with Node.js,
+                Express.js and MongoDB — Udemy
+            </li>
+
+            <li>
+                Modern JavaScript (ES6+), API Integration
+                and Asynchronous Programming — Udemy
+            </li>
+
+        </ul>
+
+    </section>
+
+
+    <!-- =================================================
+         ADDITIONAL
+    ================================================== -->
+
+    <section class="section">
+
+        <div class="section-title">
+            Additional Skills
+        </div>
+
+
+        <p class="additional">
+
+            Problem Solving • Critical Thinking •
+            Communication • Teamwork • Adaptability •
+            Quick Learning • Project Ownership
+
+        </p>
+
+    </section>
+
+
+</div>
+
+
 </body>
+
 </html>
-<!-- END OF UPDATED RESUME -->

@@ -1,96 +1,233 @@
-var tablinks = document.getElementsByClassName("tab-links");
-var tabcontents = document.getElementsByClassName("tab-contents");
+/* =========================================================
+   VICKY SINGH PORTFOLIO
+   COMPLETE SCRIPT
+========================================================= */
 
-function opentab(tabname){
-    for(tablink of tablinks){
-        tablink.classList.remove("active-link");
-    }
-    for(tabcontent of tabcontents){
-        tabcontent.classList.remove("active-tab");
-    }
-    event.currentTarget.classList.add("active-link");
-    document.getElementById(tabname).classList.add("active-tab");
 
-}
-
-// ----------typing text-----------
-
+/* =========================================================
+   TYPING ANIMATION
+========================================================= */
 
 const lines = [
-    "Web Developer | HTML, CSS, JavaScript Expert",
-    "Responsive Web Design",
-    "React, Next.js, TailwindCSS",
-    "API handling and data fetching",
-    "Git, GitHub | Netlify (Deployment)",
-    "Always learning new stuff 📚"
-  ];
-  
-  let lineIndex = 0;
-  let charIndex = 0;
-  const speed = 50;
-  const typingDiv = document.getElementById("typeText");
-  
-  function typeLine() {
+    "Full Stack MERN Developer",
+    "React • Node.js • Express.js • MongoDB",
+    "Building modern and responsive web applications",
+    "REST APIs • Authentication • Database Integration",
+    "Turning real-world ideas into working applications",
+    "Always learning. Always building. 🚀"
+];
+
+let lineIndex = 0;
+let charIndex = 0;
+
+const typingSpeed = 55;
+const eraseSpeed = 30;
+const pauseAfterTyping = 1400;
+const pauseBeforeTyping = 500;
+
+const typingDiv = document.getElementById("typeText");
+
+
+function typeLine() {
+
+    if (!typingDiv) {
+        return;
+    }
+
     const currentLine = lines[lineIndex];
+
     if (charIndex < currentLine.length) {
-      typingDiv.textContent += currentLine.charAt(charIndex);
-      charIndex++;
-      setTimeout(typeLine, speed);
+
+        typingDiv.textContent +=
+            currentLine.charAt(charIndex);
+
+        charIndex++;
+
+        setTimeout(typeLine, typingSpeed);
+
     } else {
-      setTimeout(() => {
-        eraseLine();
-      }, 1000);
+
+        setTimeout(
+            eraseLine,
+            pauseAfterTyping
+        );
+
     }
-  }
-  
-  function eraseLine() {
+}
+
+
+function eraseLine() {
+
+    if (!typingDiv) {
+        return;
+    }
+
     if (charIndex > 0) {
-      typingDiv.textContent = typingDiv.textContent.slice(0, -1);
-      charIndex--;
-      setTimeout(eraseLine, 25);
+
+        typingDiv.textContent =
+            typingDiv.textContent.slice(0, -1);
+
+        charIndex--;
+
+        setTimeout(
+            eraseLine,
+            eraseSpeed
+        );
+
     } else {
-      lineIndex = (lineIndex + 1) % lines.length;
-      setTimeout(typeLine, 500);
+
+        lineIndex =
+            (lineIndex + 1) % lines.length;
+
+        setTimeout(
+            typeLine,
+            pauseBeforeTyping
+        );
+
     }
-  }
-  
-  typeLine();
-  
+}
 
 
-// ---------------sidemenu----------------
+/* Start typing animation */
 
-var sidemenu = document.getElementById("sidemenu");
+if (typingDiv) {
+    typeLine();
+}
+
+
+
+/* =========================================================
+   MOBILE SIDE MENU
+========================================================= */
+
+const sidemenu =
+    document.getElementById("sidemenu");
+
 
 function openmenu() {
+
+    if (!sidemenu) {
+        return;
+    }
+
     sidemenu.style.right = "0";
 }
 
+
 function closemenu() {
-    sidemenu.style.right = "-200px";
+
+    if (!sidemenu) {
+        return;
+    }
+
+    sidemenu.style.right = "-240px";
 }
 
-// Auto-close menu on any nav link click
-const menuLinks = document.querySelectorAll("#sidemenu a");
-menuLinks.forEach(link => {
-    link.addEventListener("click", closemenu);
+
+
+/* =========================================================
+   CLOSE MOBILE MENU AFTER CLICKING NAV LINK
+========================================================= */
+
+const menuLinks =
+    document.querySelectorAll("#sidemenu a");
+
+
+menuLinks.forEach(function (link) {
+
+    link.addEventListener(
+        "click",
+        closemenu
+    );
+
 });
 
 
-//   ------------ User message section -------------
-  const scriptURL = 'https://script.google.com/macros/s/AKfycbxAhOHk32GLD7AcZHWvcL5g7JG2NnkY1_a30k2poBarTJejBvWdKQbJgvKU_r1PBbwpBw/exec'
-  const form = document.forms['submit-to-google-sheet']
-  const msg = document.getElementById("msg")
 
-  form.addEventListener('submit', e => {
-    e.preventDefault()
-    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-      .then(response => {
-        msg.innerHTML = "Message sent successfully"
-        setTimeout(function(){
-            msg.innerHTML = ""
-        },5000)
-        form.reset()
-      })
-      .catch(error => console.error('Error!', error.message))
-  })
+/* =========================================================
+   CONTACT FORM
+========================================================= */
+
+const scriptURL =
+    "https://script.google.com/macros/s/AKfycbxAhOHk32GLD7AcZHWvcL5g7JG2NnkY1_a30k2poBarTJejBvWdKQbJgvKU_r1PBbwpBw/exec";
+
+
+const form =
+    document.forms["submit-to-google-sheet"];
+
+
+const msg =
+    document.getElementById("msg");
+
+
+if (form) {
+
+    form.addEventListener(
+        "submit",
+        function (e) {
+
+            e.preventDefault();
+
+
+            if (msg) {
+
+                msg.innerHTML =
+                    "Sending message...";
+
+            }
+
+
+            fetch(
+                scriptURL,
+                {
+                    method: "POST",
+                    body: new FormData(form)
+                }
+            )
+
+            .then(function (response) {
+
+                if (msg) {
+
+                    msg.innerHTML =
+                        "Message sent successfully ✓";
+
+                }
+
+
+                form.reset();
+
+
+                setTimeout(function () {
+
+                    if (msg) {
+
+                        msg.innerHTML = "";
+
+                    }
+
+                }, 5000);
+
+            })
+
+            .catch(function (error) {
+
+                console.error(
+                    "Error!",
+                    error.message
+                );
+
+
+                if (msg) {
+
+                    msg.innerHTML =
+                        "Something went wrong. Please try again.";
+
+                }
+
+            });
+
+        }
+    );
+
+}

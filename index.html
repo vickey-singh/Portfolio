@@ -1,262 +1,1681 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Personal Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://kit.fontawesome.com/42ca155e14.js" crossorigin="anonymous"></script>
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Vickey Singh - Full Stack MERN Developer Portfolio">
+
+    <meta name="keywords"
+        content="Vickey Singh, MERN Developer, Full Stack Developer, React, Node.js, Express, MongoDB">
+
+    <meta name="author"
+        content="Vickey Singh">
+
+    <title>
+        Vickey Singh | Full Stack MERN Developer
+    </title>
+
+    <link rel="stylesheet"
+        href="styles.css">
+
+    <script
+        src="https://kit.fontawesome.com/42ca155e14.js"
+        crossorigin="anonymous">
+    </script>
+
 </head>
+
+
 <body>
-   <div id="header">
+
+
+<!-- =========================================================
+     HEADER / HERO
+========================================================= -->
+
+<header id="header">
+
     <div class="container">
+
+        <!-- ================= NAVIGATION ================= -->
+
         <nav>
-            <img src="Logo.png" class="logo">
+
+            <img
+                src="Logo.png"
+                class="logo"
+                alt="Vickey Singh Logo"
+            >
+
+
             <ul id="sidemenu">
 
-                <li><a href="#header">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li>
+                    <a href="#header">
+                        Home
+                    </a>
+                </li>
 
-                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                <li>
+                    <a href="#about">
+                        About
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#skills-section">
+                        Skills
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#experience-section">
+                        Journey
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#services">
+                        Services
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#portfolio">
+                        My Work
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#contact">
+                        Contact
+                    </a>
+                </li>
+
+
+                <i
+                    class="fa-solid fa-xmark"
+                    onclick="closemenu()">
+                </i>
+
             </ul>
-            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+
+
+            <i
+                class="fa-solid fa-bars"
+                onclick="openmenu()">
+            </i>
+
         </nav>
-        <div class="header-text">
-            <p>Web Developer</p>
-            <h1>Hi, I'm <span>Vickey</span><br>from India</h1>
-        </div>
-
-        <!-- ----------typing text----------- -->
-        <div class="typing" id="typeText">
-        </div>
 
 
-    </div>
-</div>
-<!-- -------------about section-------------- -->
-<div id="about">
-    <div class="container">
-        
-            
-            <div class="about-col-2">
-                <h1 class="sub-title">About Me </h1>
-                <p>As a web developer, I’m someone who thrives on solving problems and turning ideas into interactive, user-friendly websites and applications. I have a strong foundation in front-end technologies like HTML, CSS, and JavaScript, and I’m comfortable working with frameworks like React and Vue to build responsive, dynamic interfaces. On the back end, I’m proficient in using Node.js, Express, and Python with Django or Flask to create efficient server-side solutions.
-                <br>
-                    I’m passionate about clean code, performance optimization, and ensuring accessibility across all devices. I also enjoy keeping up with the latest trends and technologies in the web development space, constantly improving my skills to deliver better, faster, and more reliable experiences for users. Whether it's developing a small personal project or a complex enterprise-level web application, I love tackling new challenges and collaborating with others to bring creative ideas to life.</p>
-                    
-                    
-                    <div class="tab-titles">
-                        
-                        <p class="tab-links active-link" onclick="opentab('education')">Education</p>
-                        <p class="tab-links" onclick="opentab('skills')">Skills</p>
-                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
-                       
-                    </div>
+        <!-- ================= HERO CONTENT ================= -->
 
-                    <div class="tab-contents active-tab" id="education">
-                        <ul>
-                            <li><span>2024-Ongoing</span><br>Persuing MCA from Amity University<br></li>
-                            <li><span>2019-23</span><br>BCA from GLA College with 72%.</li>
-                            <li><span>2019</span><br>Intermediate in PCM from JAC Board with 78%.</li>
-                            <li><span>2017</span><br>Matriculation from CBSE Board with 9 CGPA.</li>
-                        </ul>
-                    </div>
+        <div class="hero-content">
 
-                    <div class="tab-contents " id="skills">
-                        <ul>
-                            <li><span>Frontend</span><br>HTML5, CSS3, JavaScript (ES6+)
 
-                                <br> Responsive Web Design
-                                
-                                <br>Tailwind CSS
-                                
-                                <br>React.js (Basic to Intermediate)
-                                
-                                <br>Next.js (Pages Router)
-                                
-                                <br>API Integration (REST APIs)</li>
-                                <li><span>Backend (Basics)</span><br>Node.js (Basic understanding)
+            <div class="header-text">
 
-                                    <br>API handling and data fetching
-                                    
-                                </li>
-                                <li><span>State Management</span><br>Redux Toolkit
-
-                                    <br>React Context API (basic usage)
-                                    
-                                    </li>
-                                    <li><span>Other Skills</span><br>WebSocket (Real-time data handling)
-
-                                        <br>Basic Excel Handling via JavaScript (for storing form data)</li>
-                            <li><span>Version Control</span><br>Git, GitHub</li>
-                            <li><span>Tools & Platforms</span><br>
-                                Netlify (Deployment)
-
-                                <br>VS Code
-                                
-                                <br>Postman (API Testing)</li>
-                            <li><span>Responsive Design</span><br>Mobile-first development, Flexbox, Grid</li>
-                            <li><span>Basic UI/UX Principles</span><br>Wireframing, Color Theory, Typography</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="tab-contents" id="experience">
-                        <ul>
-                            <li><span>💼 Freelance Web Developer (Ongoing Personal Project) <br>
-                                Self-Initiated Projects | Remote <br>
-                                Jan 2024 – Present</span><br>Developed CryptoWeather Nexus, a full-stack dashboard app using Next.js, Redux, Tailwind CSS, and multiple APIs like OpenWeatherMap, CoinGecko, NewsData.io, and WebSockets.
-
-                                <br>Implemented real-time crypto updates using WebSocket (CoinCap API) and integrated global weather search with responsive design.
-                                
-                                <br>Built user interface with modular folder structure, fully responsive layouts, and modern animations.
-                                
-                                <br>Deployed project using Netlify with a professional GitHub repository and README for presentation.
-                                
-                                </li>
-                            <li><span>🎬 MovieVerse Hub (Ongoing Personal Project)
-                                <br>Personal Project | Remote
-                                <br>Mar 2025 – Present
-                                
-                                </span><br>Creating a Netflix-style movie and TV show platform with light/dark mode support, dynamic routing, and interactive search.
-
-                                <br>Designed custom UI/UX using Tailwind CSS and React Hooks, inspired by popular OTT platforms.
-                                
-                                <br>Focused on clean code, reusability, and component-driven development.</li>
-                            
-                        </ul>
-                    </div>
-                    
-            </div>
-        
-    </div>
-</div>
-<!-- -----------------services--------------- -->
-
-<div id="services">
-    <div class="container">
-        <h1 class="sub-title">My Services </h1>
-        <div class="services-list">
-            <div>
-                <i class="fa-solid fa-code"></i>
-                <h2>Responsive Web Design</h2>
-                <p>
-                    I create modern, mobile-friendly websites that look great on all devices 
-                    using HTML, CSS, Tailwind, and responsive layout techniques.
+                <p class="hero-label">
+                    FULL STACK MERN DEVELOPER
                 </p>
-            </div>
-            <div>
-                <i class="fa-brands fa-node-js"></i>
-                <h2>Frontend Development</h2>
-                <p>
-                    Clean and interactive user interfaces built using 
-                    JavaScript, React.js, and Next.js. I focus on user experience and performance.
+
+
+                <h1>
+
+                    Hi, I'm
+                    <span>Vickey.</span>
+
+                    <br>
+
+                    I build
+                    <span>modern web applications.</span>
+
+                </h1>
+
+
+                <p class="hero-description">
+
+                    I build responsive and practical web
+                    applications using React, Node.js,
+                    Express.js and MongoDB — from frontend
+                    interfaces to backend APIs and databases.
+
                 </p>
-            </div>
-            <div>
-                <i class="fa-solid fa-masks-theater"></i>
-                <h2>API Integration</h2>
-                <p>
-                    I connect websites to real-time APIs (like Weather, Crypto, Movie DB, etc.)
-                     for dynamic data, using Axios and Fetch.
-                </p>
-            </div>
-            <div>
-                <i class="fa-solid fa-user-secret"></i>
-                <h2>Website Deployment</h2>
-                <p>
-                    I deploy websites on platforms like Netlify and GitHub 
-                    Pages with proper configuration and optimization.
-                </p>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- --------------portfolio------------ -->
 
-<div id="portfolio">
-<div class="container">
-    <h1 class="sub-title">My Work </h1>  
-    <div class="work-list">
-        <div class="work">
-            <img src="work1.jpeg">
-            <div class="layer">
-                <h3>🎬 MovieVerse Hub(Ongoing Personal Project)</h3><br>
-                <p>A Netflix-style movie & TV discovery platform. <br>
 
-                   <br> MovieVerse Hub is a modern, responsive web application that allows users to explore trending movies, TV shows, 
-                    and search content dynamically. Designed with a sleek Netflix-inspired dark theme, 
-                    it offers a cinematic user experience with hover effects, light/dark mode toggle, and responsive layout for all devices.</p>
-                <a href="#"><i class="fa-solid fa-square-arrow-up-right"></i></a>
-            </div>
-        </div>
+                <div class="hero-buttons">
 
-        <div class="work">
-            <img src="work2.jpeg">
-            <div class="layer">
-                <h3>Guess-The_word</h3>
-                <p>Guess the Word Game is a fun and interactive word-guessing game where players guess words based on hints.
-                    Players earn 10 points for a correct guess and lose 5 points for a wrong one.
-                    The game allows three lives, and upon losing all, the game restarts automatically.</p>
-                <br> 
-                <a href="https://guessthe-word.netlify.app/" target="_blank"><i class="fa-solid fa-square-arrow-up-right"></i></a>
-            </div>
-        </div>
+                    <a
+                        href="#portfolio"
+                        class="btn hero-btn">
 
-        <div class="work">
-            <img src="work3.jpeg">
-            <div class="layer">
-                <h3>Cryptoweather-Nexus </h3>
-                <p> A real-time dashboard built with Next.js that combines live weather updates, 
-                    cryptocurrency prices, and the latest crypto news. 
-                    Powered by OpenWeatherMap, CoinCap WebSocket, CoinGecko, and NewsData.io APIs. </p>
-                 
-                <a href="https://thecryptoweather-nexus.netlify.app/" target="_blank"><i class="fa-solid fa-square-arrow-up-right"></i></a>
-            </div>
-        </div>
-    </div>
-</div>
-<a href="#" class="btn">see more</a>
+                        View My Work
 
-</div>
-<!-- -----------------contact--------------- -->
-<div id="contact">
-    <div class="container">
-        <div class="row">
-            <div class="contact-left">
-                <h1 class="sub-title">Contact Me</h1>
-                <p><i class="fa-solid fa-paper-plane"></i>vickeykumarsingh.edu@gmail.com</p>
-                <p><i class="fa-solid fa-phone"></i>9065059233</p>
-                <div class="social-icons">
-                    <a href="https://github.com/vickey-singh"><i class="fa-brands fa-github"></i></a>
-                    <a href="https://www.linkedin.com/in/vickey-kumar-singh-528862328/"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="https://www.instagram.com/official_vickey_singh/"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="https://x.com/Vickey_Singh_"><i class="fa-brands fa-twitter-square"></i></a>
+                        <i
+                            class="fa-solid fa-arrow-down">
+                        </i>
+
+                    </a>
+
+
+                    <a
+                        href="#contact"
+                        class="btn hero-btn secondary-btn">
+
+                        Let's Talk
+
+                        <i
+                            class="fa-solid fa-paper-plane">
+                        </i>
+
+                    </a>
+
                 </div>
-                <!-- <a href="Resume.html" download class="btn btn2">Download CV</a> -->
-                <a href="Resume.html" target="_blank" class="btn btn2">Download CV</a>
 
             </div>
 
-<!-- --------------------form------------------ -->
-<div class="contact-right">
-    <form name="submit-to-google-sheet" autocomplete="on">
-        <input type="text" name="Name" placeholder="Your Name" autocomplete="name" required>
-        <input type="email" name="Email" placeholder="Your Email" autocomplete="email" required>
-        <textarea name="Message" rows="6" placeholder="Your Message" autocomplete="off"></textarea>
-        <button type="submit" class="btn btn2">Submit</button>
-    </form>
-    <span id="msg"></span>
-</div>
+
+            <!-- ================= HERO CARD ================= -->
+
+            <div class="hero-badge">
+
+                <div class="badge-icon">
+
+                    <i
+                        class="fa-solid fa-code">
+                    </i>
+
+                </div>
+
+
+                <div>
+
+                    <strong>
+                        MERN Stack
+                    </strong>
+
+                    <span>
+                        Full Stack Development
+                    </span>
+
+                </div>
+
+            </div>
+
 
         </div>
+
+
+        <!-- ================= TYPING TEXT ================= -->
+
+        <div class="typing-wrapper">
+
+            <span class="typing-prefix">
+                &gt;
+            </span>
+
+            <div
+                class="typing"
+                id="typeText">
+            </div>
+
+            <span class="typing-cursor">
+                |
+            </span>
+
+        </div>
+
+
+        <!-- ================= SCROLL INDICATOR ================= -->
+
+        <a
+            href="#about"
+            class="scroll-indicator">
+
+            <span>
+                SCROLL TO EXPLORE
+            </span>
+
+            <i
+                class="fa-solid fa-arrow-down">
+            </i>
+
+        </a>
+
     </div>
+
+</header>
+
+
+
+<!-- =========================================================
+     ABOUT
+========================================================= -->
+
+<section id="about">
+
+    <div class="container">
+
+
+        <div class="section-heading">
+
+            <span>
+                ABOUT ME
+            </span>
+
+            <h2>
+
+                Building ideas into
+                <strong>real applications.</strong>
+
+            </h2>
+
+        </div>
+
+
+
+        <div class="about-grid">
+
+
+            <!-- ================= ABOUT TEXT ================= -->
+
+            <div class="about-main">
+
+                <p class="about-intro">
+
+                    I'm a Full Stack Web Developer focused
+                    on building useful, responsive and
+                    maintainable web applications.
+
+                </p>
+
+
+                <p>
+
+                    I started my development journey with
+                    frontend technologies and gradually
+                    moved towards complete full-stack
+                    application development.
+
+                </p>
+
+
+                <p>
+
+                    Today I work primarily with the MERN
+                    stack, connecting React interfaces with
+                    Node.js and Express.js APIs backed by
+                    MongoDB databases.
+
+                </p>
+
+
+                <p>
+
+                    My current flagship project is
+                    <strong>EduPortal</strong>, an institute
+                    management system built around real
+                    administrative workflows such as
+                    students, teachers, fees, receipts,
+                    examinations and results.
+
+                </p>
+
+            </div>
+
+
+
+            <!-- ================= HIGHLIGHTS ================= -->
+
+            <div class="about-highlights">
+
+
+                <div class="highlight-card">
+
+                    <i
+                        class="fa-solid fa-layer-group">
+                    </i>
+
+                    <h3>
+                        MERN Stack
+                    </h3>
+
+                    <p>
+                        React · Node · Express · MongoDB
+                    </p>
+
+                </div>
+
+
+
+                <div class="highlight-card">
+
+                    <i
+                        class="fa-solid fa-server">
+                    </i>
+
+                    <h3>
+                        REST APIs
+                    </h3>
+
+                    <p>
+                        Backend APIs & application logic
+                    </p>
+
+                </div>
+
+
+
+                <div class="highlight-card">
+
+                    <i
+                        class="fa-solid fa-shield-halved">
+                    </i>
+
+                    <h3>
+                        Authentication
+                    </h3>
+
+                    <p>
+                        JWT & protected application flows
+                    </p>
+
+                </div>
+
+
+
+                <div class="highlight-card">
+
+                    <i
+                        class="fa-solid fa-database">
+                    </i>
+
+                    <h3>
+                        MongoDB
+                    </h3>
+
+                    <p>
+                        Data modeling & database operations
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ================= EDUCATION ================= -->
+
+        <div class="education-box">
+
+
+            <div class="education-title">
+
+                <i
+                    class="fa-solid fa-graduation-cap">
+                </i>
+
+                <h3>
+                    Education
+                </h3>
+
+            </div>
+
+
+
+            <div class="education-list">
+
+
+                <div>
+
+                    <span>
+                        2024 — Ongoing
+                    </span>
+
+                    <h4>
+                        MCA
+                    </h4>
+
+                    <p>
+                        Amity University
+                    </p>
+
+                </div>
+
+
+
+                <div>
+
+                    <span>
+                        2019 — 2023
+                    </span>
+
+                    <h4>
+                        BCA
+                    </h4>
+
+                    <p>
+                        GLA College · 72%
+                    </p>
+
+                </div>
+
+
+
+                <div>
+
+                    <span>
+                        2019
+                    </span>
+
+                    <h4>
+                        Intermediate · PCM
+                    </h4>
+
+                    <p>
+                        JAC Board · 78%
+                    </p>
+
+                </div>
+
+
+
+                <div>
+
+                    <span>
+                        2017
+                    </span>
+
+                    <h4>
+                        Matriculation
+                    </h4>
+
+                    <p>
+                        CBSE Board · 9 CGPA
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     SKILLS
+========================================================= -->
+
+<section id="skills-section">
+
+    <div class="container">
+
+
+        <div class="section-heading">
+
+            <span>
+                TECHNICAL SKILLS
+            </span>
+
+            <h2>
+
+                Technologies I use to
+                <strong>build things.</strong>
+
+            </h2>
+
+        </div>
+
+
+
+        <div class="skills-grid">
+
+
+            <!-- FRONTEND -->
+
+            <div class="skill-category">
+
+                <div class="skill-header">
+
+                    <div class="skill-number">
+                        01
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Frontend
+                        </h3>
+
+                        <p>
+                            Interfaces & user experience
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="skill-tags">
+
+                    <span>HTML5</span>
+
+                    <span>CSS3</span>
+
+                    <span>JavaScript</span>
+
+                    <span>React.js</span>
+
+                    <span>Tailwind CSS</span>
+
+                    <span>Axios</span>
+
+                    <span>Responsive Design</span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- BACKEND -->
+
+            <div class="skill-category">
+
+                <div class="skill-header">
+
+                    <div class="skill-number">
+                        02
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Backend
+                        </h3>
+
+                        <p>
+                            APIs & server-side logic
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="skill-tags">
+
+                    <span>Node.js</span>
+
+                    <span>Express.js</span>
+
+                    <span>REST APIs</span>
+
+                    <span>JWT</span>
+
+                    <span>Authentication</span>
+
+                    <span>Authorization</span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- DATABASE -->
+
+            <div class="skill-category">
+
+                <div class="skill-header">
+
+                    <div class="skill-number">
+                        03
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Database
+                        </h3>
+
+                        <p>
+                            Data & application storage
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="skill-tags">
+
+                    <span>MongoDB</span>
+
+                    <span>Mongoose</span>
+
+                    <span>Data Modeling</span>
+
+                    <span>CRUD</span>
+
+                    <span>Database Design</span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- TOOLS -->
+
+            <div class="skill-category">
+
+                <div class="skill-header">
+
+                    <div class="skill-number">
+                        04
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Tools & Workflow
+                        </h3>
+
+                        <p>
+                            Development & deployment
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="skill-tags">
+
+                    <span>Git</span>
+
+                    <span>GitHub</span>
+
+                    <span>VS Code</span>
+
+                    <span>Postman</span>
+
+                    <span>Netlify</span>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     EXPERIENCE
+========================================================= -->
+
+<section id="experience-section">
+
+    <div class="container">
+
+
+        <div class="section-heading">
+
+            <span>
+                MY JOURNEY
+            </span>
+
+            <h2>
+
+                From frontend
+                <strong>to full stack.</strong>
+
+            </h2>
+
+        </div>
+
+
+
+        <div class="timeline">
+
+
+            <!-- 2024 -->
+
+            <div class="timeline-item">
+
+                <div class="timeline-date">
+                    2024
+                </div>
+
+                <div class="timeline-dot"></div>
+
+
+                <div class="timeline-content">
+
+                    <span>
+                        FOUNDATION
+                    </span>
+
+                    <h3>
+                        Web Development
+                    </h3>
+
+                    <p>
+
+                        Built a strong foundation in HTML,
+                        CSS and JavaScript while developing
+                        responsive websites and interactive
+                        frontend experiences.
+
+                    </p>
+
+
+                    <div class="timeline-tags">
+
+                        <span>HTML</span>
+
+                        <span>CSS</span>
+
+                        <span>JavaScript</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- 2025 -->
+
+            <div class="timeline-item">
+
+                <div class="timeline-date">
+                    2025
+                </div>
+
+                <div class="timeline-dot"></div>
+
+
+                <div class="timeline-content">
+
+                    <span>
+                        FRONTEND + API
+                    </span>
+
+                    <h3>
+                        React & API Development
+                    </h3>
+
+                    <p>
+
+                        Developed interactive applications
+                        using React and Next.js, integrated
+                        external APIs and explored real-time
+                        data using WebSocket-based workflows.
+
+                    </p>
+
+
+                    <div class="timeline-tags">
+
+                        <span>React</span>
+
+                        <span>Next.js</span>
+
+                        <span>REST APIs</span>
+
+                        <span>WebSocket</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- 2026 -->
+
+            <div class="timeline-item active">
+
+                <div class="timeline-date">
+                    2026
+                </div>
+
+                <div class="timeline-dot"></div>
+
+
+                <div class="timeline-content">
+
+                    <span>
+                        FULL STACK
+                    </span>
+
+                    <h3>
+                        EduPortal · MERN Application
+                    </h3>
+
+                    <p>
+
+                        Developing a complete institute
+                        management platform using React,
+                        Node.js, Express.js and MongoDB.
+
+                        The platform covers authentication,
+                        student and teacher management,
+                        fees, payment records, receipt
+                        generation, examinations and results.
+                        Built as a real-world institute
+                        management solution for
+                        Prerna Institute of Excellence.
+
+                    </p>
+
+
+                    <div class="timeline-tags">
+
+                        <span>React</span>
+
+                        <span>Node.js</span>
+
+                        <span>Express.js</span>
+
+                        <span>MongoDB</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     SERVICES
+========================================================= -->
+
+<section id="services">
+
+    <div class="container">
+
+
+        <div class="section-heading">
+
+            <span>
+                WHAT I DO
+            </span>
+
+            <h2>
+
+                What I can
+                <strong>build for you.</strong>
+
+            </h2>
+
+        </div>
+
+
+
+        <div class="services-list">
+
+
+            <!-- SERVICE 1 -->
+
+            <div class="service-card">
+
+                <div class="service-top">
+
+                    <span>
+                        01
+                    </span>
+
+                    <i
+                        class="fa-solid fa-laptop-code">
+                    </i>
+
+                </div>
+
+
+                <h2>
+                    Full Stack Development
+                </h2>
+
+
+                <p>
+
+                    Complete web applications with
+                    frontend interfaces, backend APIs,
+                    authentication and database integration.
+
+                </p>
+
+
+                <div class="service-line"></div>
+
+
+                <small>
+                    React · Node.js · Express · MongoDB
+                </small>
+
+            </div>
+
+
+
+            <!-- SERVICE 2 -->
+
+            <div class="service-card">
+
+                <div class="service-top">
+
+                    <span>
+                        02
+                    </span>
+
+                    <i
+                        class="fa-brands fa-react">
+                    </i>
+
+                </div>
+
+
+                <h2>
+                    React Development
+                </h2>
+
+
+                <p>
+
+                    Responsive and reusable React
+                    interfaces focused on clean
+                    component architecture and
+                    user experience.
+
+                </p>
+
+
+                <div class="service-line"></div>
+
+
+                <small>
+                    React · JavaScript · Responsive UI
+                </small>
+
+            </div>
+
+
+
+            <!-- SERVICE 3 -->
+
+            <div class="service-card">
+
+                <div class="service-top">
+
+                    <span>
+                        03
+                    </span>
+
+                    <i
+                        class="fa-solid fa-code-branch">
+                    </i>
+
+                </div>
+
+
+                <h2>
+                    REST API Development
+                </h2>
+
+
+                <p>
+
+                    Backend APIs for authentication,
+                    application data, CRUD operations
+                    and real-world business workflows.
+
+                </p>
+
+
+                <div class="service-line"></div>
+
+
+                <small>
+                    Node.js · Express.js · REST APIs
+                </small>
+
+            </div>
+
+
+
+            <!-- SERVICE 4 -->
+
+            <div class="service-card">
+
+                <div class="service-top">
+
+                    <span>
+                        04
+                    </span>
+
+                    <i
+                        class="fa-solid fa-database">
+                    </i>
+
+                </div>
+
+
+                <h2>
+                    Database Development
+                </h2>
+
+
+                <p>
+
+                    Practical MongoDB database structures,
+                    Mongoose models and data workflows
+                    for full-stack applications.
+
+                </p>
+
+
+                <div class="service-line"></div>
+
+
+                <small>
+                    MongoDB · Mongoose · Data Modeling
+                </small>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     MY WORK
+========================================================= -->
+
+<section id="portfolio">
+
+    <div class="container">
+
+
+        <div class="portfolio-heading">
+
+
+            <div class="section-heading">
+
+                <span>
+                    SELECTED PROJECTS
+                </span>
+
+                <h2>
+
+                    Things I've
+                    <strong>built.</strong>
+
+                </h2>
+
+            </div>
+
+
+            <p>
+
+                A few projects that represent my
+                journey from frontend development
+                to full-stack application development.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="work-list">
+
+
+            <!-- =================================================
+                 EDUSPHERE
+            ================================================= -->
+
+            <div class="work">
+
+                <img
+                    src="work1.jpeg"
+                    alt="EduPortal Institute Management System"
+                >
+
+
+                <div class="layer">
+
+
+                    <div class="project-meta">
+
+                        <span>
+                            01 · FEATURED
+                        </span>
+
+                        <span>
+                            2026
+                        </span>
+
+                    </div>
+
+
+                    <h3>
+                        EduPortal
+                    </h3>
+
+
+                    <h4>
+                        Institute Management System
+                    </h4>
+
+
+                    <p>
+
+                        A full-stack MERN application
+                        designed to manage institute
+                        operations including students,
+                        teachers, fees, receipts,
+                        examinations and results.
+
+                    </p>
+
+
+                    <div class="project-stack">
+
+                        <span>
+                            React
+                        </span>
+
+                        <span>
+                            Node.js
+                        </span>
+
+                        <span>
+                            Express.js
+                        </span>
+
+                        <span>
+                            MongoDB
+                        </span>
+
+                    </div>
+
+
+                    <div class="project-links">
+
+                        <a
+                            href="https://edvora-demo.vercel.app/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="EduPortal Live Demo">
+
+                            Live Demo
+
+                            <i
+                                class="fa-solid fa-arrow-up-right-from-square">
+                            </i>
+
+                        </a>
+
+
+                        <a
+                            href="https://prernainstituteofexcellence.in/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Prerna Institute of Excellence">
+
+                            Client Website
+
+                            <i
+                                class="fa-solid fa-building">
+                            </i>
+
+                        </a>
+
+
+                        <a
+                            href="https://github.com/vickey-singh/eduportal-mern"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="EduPortal GitHub">
+
+                            GitHub
+
+                            <i
+                                class="fa-brands fa-github">
+                            </i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 GUESS THE WORD
+            ================================================= -->
+
+            <div class="work">
+
+                <img
+                    src="work2.jpeg"
+                    alt="Guess The Word Game"
+                >
+
+
+                <div class="layer">
+
+
+                    <div class="project-meta">
+
+                        <span>
+                            02 · WEB GAME
+                        </span>
+
+                    </div>
+
+
+                    <h3>
+                        Guess-The-Word
+                    </h3>
+
+
+                    <p>
+
+                        An interactive word guessing
+                        game featuring hints, scoring,
+                        lives and automatic restart
+                        functionality.
+
+                    </p>
+
+
+                    <div class="project-stack">
+
+                        <span>
+                            HTML
+                        </span>
+
+                        <span>
+                            CSS
+                        </span>
+
+                        <span>
+                            JavaScript
+                        </span>
+
+                    </div>
+
+
+                    <a
+                        href="https://guessthe-word.netlify.app/"
+                        target="_blank"
+                        rel="noopener noreferrer">
+
+                        View Project
+
+                        <i
+                            class="fa-solid fa-arrow-up-right-from-square">
+                        </i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 CRYPTOWEATHER
+            ================================================= -->
+
+            <div class="work">
+
+                <img
+                    src="work3.jpeg"
+                    alt="CryptoWeather Nexus Dashboard"
+                >
+
+
+                <div class="layer">
+
+
+                    <div class="project-meta">
+
+                        <span>
+                            03 · DASHBOARD
+                        </span>
+
+                    </div>
+
+
+                    <h3>
+                        CryptoWeather Nexus
+                    </h3>
+
+
+                    <p>
+
+                        A real-time dashboard combining
+                        weather information, cryptocurrency
+                        prices and crypto news through
+                        multiple APIs and WebSocket data.
+
+                    </p>
+
+
+                    <div class="project-stack">
+
+                        <span>
+                            Next.js
+                        </span>
+
+                        <span>
+                            APIs
+                        </span>
+
+                        <span>
+                            WebSocket
+                        </span>
+
+                    </div>
+
+
+                    <a
+                        href="https://thecryptoweather-nexus.netlify.app/"
+                        target="_blank"
+                        rel="noopener noreferrer">
+
+                        View Project
+
+                        <i
+                            class="fa-solid fa-arrow-up-right-from-square">
+                        </i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     CONTACT
+========================================================= -->
+
+<section id="contact">
+
+    <div class="container">
+
+
+        <div class="contact-wrapper">
+
+
+            <div class="contact-left">
+
+
+                <span class="contact-label">
+                    GET IN TOUCH
+                </span>
+
+
+                <h1 class="sub-title">
+
+                    Let's build something
+                    <span>great.</span>
+
+                </h1>
+
+
+                <p>
+
+                    Have a project idea or want to
+                    discuss a web application?
+                    Feel free to reach out.
+
+                </p>
+
+
+                <div class="contact-details">
+
+
+                    <p>
+
+                        <i
+                            class="fa-solid fa-paper-plane">
+                        </i>
+
+                        vickeykumarsingh.edu@gmail.com
+
+                    </p>
+
+
+                    <p>
+
+                        <i
+                            class="fa-solid fa-phone">
+                        </i>
+
+                        9065059233
+
+                    </p>
+
+
+                </div>
+
+
+
+                <div class="social-icons">
+
+
+                    <a
+                        href="https://github.com/vickey-singh"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="GitHub">
+
+                        <i
+                            class="fa-brands fa-github">
+                        </i>
+
+                    </a>
+
+
+                    <a
+                        href="https://www.linkedin.com/in/vickey-kumar-singh-528862328/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="LinkedIn">
+
+                        <i
+                            class="fa-brands fa-linkedin">
+                        </i>
+
+                    </a>
+
+
+                    <a
+                        href="https://www.instagram.com/official_vickey_singh/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Instagram">
+
+                        <i
+                            class="fa-brands fa-instagram">
+                        </i>
+
+                    </a>
+
+
+                    <a
+                        href="https://x.com/Vickey_Singh_"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="X">
+
+                        <i
+                            class="fa-brands fa-twitter-square">
+                        </i>
+
+                    </a>
+
+
+                </div>
+
+
+
+                <a
+                    href="Resume.html"
+                    target="_blank"
+                    class="btn btn2">
+
+                    Download CV
+
+                </a>
+
+
+            </div>
+
+
+
+            <!-- ================= FORM ================= -->
+
+            <div class="contact-right">
+
+
+                <form
+                    name="submit-to-google-sheet"
+                    autocomplete="on">
+
+
+                    <input
+                        type="text"
+                        name="Name"
+                        placeholder="Your Name"
+                        autocomplete="name"
+                        required
+                    >
+
+
+                    <input
+                        type="email"
+                        name="Email"
+                        placeholder="Your Email"
+                        autocomplete="email"
+                        required
+                    >
+
+
+                    <textarea
+                        name="Message"
+                        rows="6"
+                        placeholder="Your Message"
+                        autocomplete="off"
+                    ></textarea>
+
+
+                    <button
+                        type="submit"
+                        class="btn btn2">
+
+                        Send Message
+
+                        <i
+                            class="fa-solid fa-paper-plane">
+                        </i>
+
+                    </button>
+
+
+                </form>
+
+
+                <span id="msg"></span>
+
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
     <div class="copyright">
-        <p>&copy; 2025 <span class="brand">Vickey Singh Portfolio</span>. All Rights Reserved.</p>
+
+        <p>
+
+            &copy; 2026
+
+            <span class="brand">
+                Vickey Singh
+            </span>
+
+            · Full Stack MERN Developer
+
+        </p>
+
     </div>
-</div>
+
+
+</section>
+
+
+
 <script src="script.js"></script>
+
 </body>
+
 </html>
