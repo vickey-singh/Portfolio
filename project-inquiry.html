@@ -1,0 +1,597 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Project Inquiry | Hire Me</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="project-inquiry.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+</head>
+
+<body>
+
+    <main class="inquiry-page">
+        <div class="container">
+
+            <header class="inquiry-header">
+                <p class="section-label">PROJECT INQUIRY</p>
+
+                <h1>Let's Discuss Your Project.</h1>
+
+                <p class="inquiry-description">
+                    Share your project requirements, budget and expectations.
+                    I'll review the details and get back to you with the next steps.
+                </p>
+
+                <p class="inquiry-note">
+                    Approximately 3–5 minutes · No-obligation inquiry
+                </p>
+            </header>
+
+            <form id="projectInquiryForm" name="project-inquiry-form">
+
+                <!-- 01: Contact and Project -->
+
+                <section class="form-section">
+                    <div class="section-heading">
+                        <span class="section-number">01</span>
+
+                        <div>
+                            <h2>Contact & Project</h2>
+                            <p>Tell me about yourself and your project.</p>
+                        </div>
+                    </div>
+
+                    <div class="form-grid">
+
+                        <div class="form-group">
+                            <label for="clientName">
+                                Full Name <span>*</span>
+                            </label>
+
+                            <input
+                                type="text"
+                                id="clientName"
+                                name="Client Name"
+                                placeholder="Your full name"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="clientEmail">
+                                Email Address <span>*</span>
+                            </label>
+
+                            <input
+                                type="email"
+                                id="clientEmail"
+                                name="Client Email"
+                                placeholder="you@example.com"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="clientPhone">
+                                Phone / WhatsApp
+                            </label>
+
+                            <input
+                                type="tel"
+                                id="clientPhone"
+                                name="Phone / WhatsApp"
+                                placeholder="Your contact number"
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="projectName">
+                                Project Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="projectName"
+                                name="Project Name"
+                                placeholder="e.g. Business Website"
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="projectType">
+                                Project Type <span>*</span>
+                            </label>
+
+                            <select
+                                id="projectType"
+                                name="Project Type"
+                                required
+                            >
+                                <option value="">Select project type</option>
+                                <option>Business Website</option>
+                                <option>Portfolio Website</option>
+                                <option>E-commerce Website</option>
+                                <option>Web Application / Dashboard</option>
+                                <option>Management System</option>
+                                <option>Landing Page</option>
+                                <option>Website Redesign</option>
+                                <option>Bug Fixes / Improvements</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="projectStatus">
+                                Current Project Status
+                            </label>
+
+                            <select
+                                id="projectStatus"
+                                name="Project Status"
+                            >
+                                <option value="">Select status</option>
+                                <option>New Project</option>
+                                <option>Already in Development</option>
+                                <option>Existing Website / Application</option>
+                                <option>Redesign or Upgrade</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label for="projectRequirements">
+                                Project Requirements <span>*</span>
+                            </label>
+
+                            <textarea
+                                id="projectRequirements"
+                                name="Project Requirements"
+                                rows="5"
+                                placeholder="Describe the purpose of your project, the pages or features you need, and the problem it should solve."
+                                required
+                            ></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="referenceUrl">
+                                Reference Website / Example
+                            </label>
+
+                            <input
+                                type="url"
+                                id="referenceUrl"
+                                name="Reference URL"
+                                placeholder="https://example.com"
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="timeline">
+                                Expected Timeline
+                            </label>
+
+                            <select id="timeline" name="Expected Timeline">
+                                <option value="">Select timeline</option>
+                                <option>As Soon As Possible</option>
+                                <option>Within 1–2 Weeks</option>
+                                <option>Within 1 Month</option>
+                                <option>Within 2–3 Months</option>
+                                <option>Flexible / To Be Discussed</option>
+                            </select>
+                        </div>
+
+                    </div>
+                </section>
+
+
+                <!-- 02: Features -->
+
+                <section class="form-section">
+                    <div class="section-heading">
+                        <span class="section-number">02</span>
+
+                        <div>
+                            <h2>Required Features</h2>
+                            <p>Select the main features you need.</p>
+                        </div>
+                    </div>
+
+                    <div class="checkbox-grid">
+
+                        <label class="check-option">
+                            <input
+                                type="checkbox"
+                                name="featureOption"
+                                value="User Registration & Login"
+                            >
+                            <span>User Registration & Login</span>
+                        </label>
+
+                        <label class="check-option">
+                            <input
+                                type="checkbox"
+                                name="featureOption"
+                                value="Admin Dashboard"
+                            >
+                            <span>Admin Dashboard</span>
+                        </label>
+
+                        <label class="check-option">
+                            <input
+                                type="checkbox"
+                                name="featureOption"
+                                value="Customer Dashboard"
+                            >
+                            <span>Customer Dashboard</span>
+                        </label>
+
+                        <label class="check-option">
+                            <input
+                                type="checkbox"
+                                name="featureOption"
+                                value="Online Payments"
+                            >
+                            <span>Online Payments</span>
+                        </label>
+
+                        <label class="check-option">
+                            <input
+                                type="checkbox"
+                                name="featureOption"
+                                value="Email Notifications"
+                            >
+                            <span>Email Notifications</span>
+                        </label>
+
+                        <label class="check-option">
+                            <input
+                                type="checkbox"
+                                name="featureOption"
+                                value="Reports & Analytics"
+                            >
+                            <span>Reports & Analytics</span>
+                        </label>
+
+                        <label class="check-option">
+                            <input
+                                type="checkbox"
+                                name="featureOption"
+                                value="Search, Filters & Data Management"
+                            >
+                            <span>Search, Filters & Data Management</span>
+                        </label>
+
+                        <label class="check-option">
+                            <input
+                                type="checkbox"
+                                name="featureOption"
+                                value="API / Third-Party Integration"
+                            >
+                            <span>API / Third-Party Integration</span>
+                        </label>
+
+                        <label class="check-option">
+                            <input
+                                type="checkbox"
+                                name="featureOption"
+                                value="Mobile Responsive Design"
+                            >
+                            <span>Mobile Responsive Design</span>
+                        </label>
+
+                        <label class="check-option">
+                            <input
+                                type="checkbox"
+                                name="featureOption"
+                                value="Other Features"
+                            >
+                            <span>Other Features</span>
+                        </label>
+
+                    </div>
+                </section>
+
+
+                <!-- 03: Budget and Payment -->
+
+                <section class="form-section">
+                    <div class="section-heading">
+                        <span class="section-number">03</span>
+
+                        <div>
+                            <h2>Budget & Payment</h2>
+                            <p>Share your budget and preferred payment schedule.</p>
+                        </div>
+                    </div>
+
+                    <div class="form-grid">
+
+                        <div class="form-group">
+                            <label for="budget">
+                                Estimated Budget <span>*</span>
+                            </label>
+
+                            <select id="budget" name="Estimated Budget" required>
+                                <option value="">Select your budget</option>
+                                <option>₹5,000 – ₹10,000</option>
+                                <option>₹10,001 – ₹20,000</option>
+                                <option>₹20,001 – ₹30,000</option>
+                                <option>₹30,001 – ₹50,000</option>
+                                <option>₹50,000+</option>
+                                <option>Need a Recommendation</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="paymentSchedule">
+                                Preferred Payment Schedule
+                            </label>
+
+                            <select
+                                id="paymentSchedule"
+                                name="Payment Schedule"
+                            >
+                                <option value="">Select an option</option>
+                                <option>Installment-wise Payment</option>
+                                <option>Advance + Final Payment</option>
+                                <option>Discuss the Payment Schedule</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="hostingPreference">
+                                Domain & Hosting
+                            </label>
+
+                            <select
+                                id="hostingPreference"
+                                name="Domain & Hosting"
+                            >
+                                <option value="">Select an option</option>
+                                <option>I Will Purchase Them Myself</option>
+                                <option>Need You to Purchase / Set Them Up</option>
+                                <option>I Already Own a Domain / Hosting</option>
+                                <option>Need Recommendations</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="hostingCost">
+                                Domain & Hosting Cost
+                            </label>
+
+                            <select
+                                id="hostingCost"
+                                name="Hosting Cost Preference"
+                            >
+                                <option value="">Select an option</option>
+                                <option>Show Separately in the Quotation</option>
+                                <option>Include in the Combined Quotation</option>
+                                <option>Discuss After Reviewing Requirements</option>
+                            </select>
+                        </div>
+
+                    </div>
+                </section>
+
+
+                <!-- 04: Support and Project Terms -->
+
+                <section class="form-section">
+                    <div class="section-heading">
+                        <span class="section-number">04</span>
+
+                        <div>
+                            <h2>Support & Project Terms</h2>
+                            <p>Choose any additional services and handover preferences.</p>
+                        </div>
+                    </div>
+
+                    <div class="form-grid">
+
+                        <div class="form-group">
+                            <label for="maintenancePlan">
+                                Maintenance Preference
+                            </label>
+
+                            <select
+                                id="maintenancePlan"
+                                name="Maintenance Preference"
+                            >
+                                <option value="">Select an option</option>
+                                <option>One-Time Delivery Only</option>
+                                <option>Short-Term Support After Launch</option>
+                                <option>Monthly Maintenance Plan</option>
+                                <option>Quarterly Maintenance Plan</option>
+                                <option>Annual Maintenance Plan</option>
+                                <option>Pay When Needed</option>
+                                <option>Discuss Available Options</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="maintenanceServices">
+                                Support Services Needed
+                            </label>
+
+                            <select
+                                id="maintenanceServices"
+                                name="Maintenance Services"
+                            >
+                                <option value="">Select an option</option>
+                                <option>Bug Fixes & Technical Support</option>
+                                <option>Updates & Security</option>
+                                <option>Content Changes</option>
+                                <option>Backups & Monitoring</option>
+                                <option>All of the Above</option>
+                                <option>To Be Discussed</option>
+                                <option>No Ongoing Support Needed</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label>Additional Services</label>
+
+                            <div class="checkbox-grid">
+
+                                <label class="check-option">
+                                    <input
+                                        type="checkbox"
+                                        name="serviceOption"
+                                        value="Content Writing"
+                                    >
+                                    <span>Content Writing</span>
+                                </label>
+
+                                <label class="check-option">
+                                    <input
+                                        type="checkbox"
+                                        name="serviceOption"
+                                        value="Logo & Branding"
+                                    >
+                                    <span>Logo & Branding</span>
+                                </label>
+
+                                <label class="check-option">
+                                    <input
+                                        type="checkbox"
+                                        name="serviceOption"
+                                        value="SEO"
+                                    >
+                                    <span>SEO</span>
+                                </label>
+
+                                <label class="check-option">
+                                    <input
+                                        type="checkbox"
+                                        name="serviceOption"
+                                        value="Data Migration"
+                                    >
+                                    <span>Data Migration</span>
+                                </label>
+
+                                <label class="check-option">
+                                    <input
+                                        type="checkbox"
+                                        name="serviceOption"
+                                        value="Source-Code / Exclusive Rights Handover"
+                                    >
+                                    <span>Source-Code / Exclusive Rights Handover</span>
+                                </label>
+
+                                <label class="check-option">
+                                    <input
+                                        type="checkbox"
+                                        name="serviceOption"
+                                        value="Other Services"
+                                    >
+                                    <span>Other Services</span>
+                                </label>
+
+                            </div>
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label for="ownershipTerms">
+                                Source Code & Ownership
+                            </label>
+
+                            <select
+                                id="ownershipTerms"
+                                name="Source Code & Ownership"
+                            >
+                                <option value="">Select an option</option>
+                                <option>
+                                    Standard Project Handover — Discuss Deliverables
+                                </option>
+                                <option>
+                                    Full Source-Code Delivery & Repository Access
+                                </option>
+                                <option>
+                                    Exclusive Ownership Rights — Discuss Terms
+                                </option>
+                                <option>
+                                    Need Advice on Ownership & Handover
+                                </option>
+                            </select>
+
+                            <p class="field-hint">
+                                Source-code delivery, exclusive rights and any
+                                separate handover fee will be clarified in the quotation.
+                            </p>
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label for="additionalNotes">
+                                Additional Notes (Optional)
+                            </label>
+
+                            <textarea
+                                id="additionalNotes"
+                                name="Additional Notes"
+                                rows="3"
+                                placeholder="Anything else I should know about your project?"
+                            ></textarea>
+                        </div>
+
+                    </div>
+                </section>
+
+
+                <!-- Existing Google Sheet Compatibility Fields -->
+
+                <input type="hidden" name="Name" id="sheetName">
+                <input type="hidden" name="Email" id="sheetEmail">
+                <input type="hidden" name="Message" id="sheetMessage">
+                <input type="hidden" name="Features" id="sheetFeatures">
+
+
+                <!-- Submit -->
+
+                <div class="form-submit-area">
+                    <p class="privacy-note">
+                        Your information will be used to review and respond
+                        to your project inquiry.
+                    </p>
+
+                    <button
+                        type="submit"
+                        id="submitInquiryBtn"
+                        class="btn inquiry-submit-btn"
+                    >
+                        Submit Project Inquiry
+                    </button>
+
+                    <p
+                        id="inquiryMessage"
+                        class="inquiry-status"
+                        role="status"
+                        aria-live="polite"
+                    ></p>
+                </div>
+
+            </form>
+
+            <div class="back-link">
+                <a href="index.html">← Back to Portfolio</a>
+            </div>
+
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+    <script src="project-inquiry.js"></script>
+
+</body>
+</html>

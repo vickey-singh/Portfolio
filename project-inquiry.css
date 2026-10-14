@@ -1,0 +1,388 @@
+
+/* =====================================
+   PROJECT INQUIRY PAGE
+===================================== */
+
+.inquiry-page {
+    min-height: 100vh;
+    padding: 70px 0;
+    background: #080808;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+}
+
+.inquiry-page .container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* =====================================
+   HEADER
+===================================== */
+
+.inquiry-header {
+    max-width: 720px;
+    margin: 0 auto 45px;
+    text-align: center;
+}
+
+.section-label {
+    margin-bottom: 12px;
+    color: #ff004f;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 3px;
+}
+
+.inquiry-header h1 {
+    margin-bottom: 16px;
+    font-size: clamp(30px, 5vw, 46px);
+    font-weight: 600;
+    line-height: 1.25;
+}
+
+.inquiry-description {
+    max-width: 650px;
+    margin: 0 auto;
+    color: #c4c4c4;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+.inquiry-note {
+    margin-top: 18px;
+    color: #888888;
+    font-size: 12px;
+}
+
+/* =====================================
+   FORM SECTIONS
+===================================== */
+
+#projectInquiryForm {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.form-section {
+    padding: 30px;
+    background: #101010;
+    border: 1px solid #242424;
+    border-radius: 12px;
+}
+
+.section-heading {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 28px;
+}
+
+.section-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 38px;
+    height: 38px;
+    color: #ff004f;
+    background: rgba(255, 0, 79, 0.10);
+    border: 1px solid rgba(255, 0, 79, 0.35);
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.section-heading h2 {
+    margin: 2px 0 6px;
+    font-size: 21px;
+    font-weight: 500;
+}
+
+.section-heading p {
+    margin: 0;
+    color: #929292;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+/* =====================================
+   FORM GRID AND FIELDS
+===================================== */
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.form-group.full-width {
+    grid-column: 1 / -1;
+}
+
+.form-group label {
+    margin-bottom: 9px;
+    color: #eeeeee;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.6;
+}
+
+.form-group label > span {
+    color: #ff004f;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    min-width: 0;
+    padding: 13px 14px;
+    color: #ffffff;
+    background: #080808;
+    border: 1px solid #303030;
+    border-radius: 7px;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    line-height: 1.6;
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.form-group input,
+.form-group select {
+    min-height: 47px;
+}
+
+.form-group textarea {
+    min-height: 110px;
+    resize: vertical;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #777777;
+}
+
+.form-group select {
+    cursor: pointer;
+}
+
+.form-group select option {
+    color: #ffffff;
+    background: #101010;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #ff004f;
+    box-shadow: 0 0 0 2px rgba(255, 0, 79, 0.10);
+}
+
+.field-hint {
+    margin: 9px 0 0;
+    color: #929292;
+    font-size: 11px;
+    line-height: 1.8;
+}
+
+/* =====================================
+   CHECKBOX OPTIONS
+===================================== */
+
+.checkbox-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.check-option {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    min-width: 0;
+    padding: 12px;
+    background: #080808;
+    border: 1px solid #292929;
+    border-radius: 7px;
+    cursor: pointer;
+    transition:
+        border-color 0.2s ease,
+        background 0.2s ease;
+}
+
+.check-option:hover {
+    border-color: #ff004f;
+}
+
+.check-option input {
+    flex-shrink: 0;
+    width: 15px;
+    height: 15px;
+    margin: 3px 0 0;
+    accent-color: #ff004f;
+    cursor: pointer;
+}
+
+.check-option span {
+    color: #d0d0d0;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 1.7;
+    overflow-wrap: anywhere;
+}
+
+/* =====================================
+   SUBMIT AREA
+===================================== */
+
+.form-submit-area {
+    padding: 25px 0 10px;
+    text-align: center;
+}
+
+.privacy-note {
+    margin-bottom: 20px;
+    color: #929292;
+    font-size: 11px;
+    line-height: 1.8;
+}
+
+.inquiry-submit-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    padding: 13px 30px;
+    color: #ffffff;
+    background: #ff004f;
+    border: 1px solid #ff004f;
+    border-radius: 6px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.inquiry-submit-btn:hover {
+    background: #d90043;
+    transform: translateY(-2px);
+}
+
+.inquiry-submit-btn:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.inquiry-status {
+    min-height: 24px;
+    margin-top: 16px;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.inquiry-status.success {
+    color: #5bd68b;
+}
+
+.inquiry-status.error {
+    color: #ff6688;
+}
+
+/* =====================================
+   BACK LINK
+===================================== */
+
+.back-link {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.back-link a {
+    color: #bdbdbd;
+    font-size: 12px;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.back-link a:hover {
+    color: #ff004f;
+}
+
+/* =====================================
+   RESPONSIVE DESIGN
+===================================== */
+
+@media (max-width: 650px) {
+    .inquiry-page {
+        padding: 45px 0;
+    }
+
+    .inquiry-page .container {
+        width: 92%;
+    }
+
+    .inquiry-header {
+        margin-bottom: 30px;
+    }
+
+    .inquiry-description {
+        font-size: 12px;
+    }
+
+    .form-section {
+        padding: 20px 16px;
+    }
+
+    .section-heading {
+        gap: 12px;
+        margin-bottom: 22px;
+    }
+
+    .section-number {
+        width: 34px;
+        height: 34px;
+        font-size: 12px;
+    }
+
+    .section-heading h2 {
+        font-size: 18px;
+    }
+
+    .section-heading p {
+        font-size: 11px;
+    }
+
+    .form-grid,
+    .checkbox-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 17px;
+    }
+
+    .form-group.full-width {
+        grid-column: auto;
+    }
+
+    .check-option {
+        padding: 11px;
+    }
+
+    .inquiry-submit-btn {
+        width: 100%;
+    }
+}

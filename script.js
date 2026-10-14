@@ -1,8 +1,3 @@
-/* =========================================================
-   VICKY SINGH PORTFOLIO
-   COMPLETE SCRIPT
-========================================================= */
-
 
 /* =========================================================
    TYPING ANIMATION
@@ -29,7 +24,6 @@ const typingDiv = document.getElementById("typeText");
 
 
 function typeLine() {
-
     if (!typingDiv) {
         return;
     }
@@ -37,75 +31,53 @@ function typeLine() {
     const currentLine = lines[lineIndex];
 
     if (charIndex < currentLine.length) {
-
         typingDiv.textContent +=
             currentLine.charAt(charIndex);
 
         charIndex++;
 
         setTimeout(typeLine, typingSpeed);
-
     } else {
-
-        setTimeout(
-            eraseLine,
-            pauseAfterTyping
-        );
-
+        setTimeout(eraseLine, pauseAfterTyping);
     }
 }
 
 
 function eraseLine() {
-
     if (!typingDiv) {
         return;
     }
 
     if (charIndex > 0) {
-
         typingDiv.textContent =
             typingDiv.textContent.slice(0, -1);
 
         charIndex--;
 
-        setTimeout(
-            eraseLine,
-            eraseSpeed
-        );
-
+        setTimeout(eraseLine, eraseSpeed);
     } else {
+        lineIndex = (lineIndex + 1) % lines.length;
 
-        lineIndex =
-            (lineIndex + 1) % lines.length;
-
-        setTimeout(
-            typeLine,
-            pauseBeforeTyping
-        );
-
+        setTimeout(typeLine, pauseBeforeTyping);
     }
 }
 
 
-/* Start typing animation */
+// Start typing animation.
 
 if (typingDiv) {
     typeLine();
 }
 
 
-
 /* =========================================================
    MOBILE SIDE MENU
 ========================================================= */
 
-const sidemenu =
-    document.getElementById("sidemenu");
+const sidemenu = document.getElementById("sidemenu");
 
 
 function openmenu() {
-
     if (!sidemenu) {
         return;
     }
@@ -115,7 +87,6 @@ function openmenu() {
 
 
 function closemenu() {
-
     if (!sidemenu) {
         return;
     }
@@ -124,28 +95,21 @@ function closemenu() {
 }
 
 
-
 /* =========================================================
-   CLOSE MOBILE MENU AFTER CLICKING NAV LINK
+   CLOSE MOBILE MENU AFTER NAVIGATION
 ========================================================= */
 
-const menuLinks =
-    document.querySelectorAll("#sidemenu a");
+const menuLinks = document.querySelectorAll("#sidemenu a");
 
 
-menuLinks.forEach(function (link) {
-
-    link.addEventListener(
-        "click",
-        closemenu
-    );
-
+menuLinks.forEach(function(link) {
+    link.addEventListener("click", closemenu);
 });
 
 
-
 /* =========================================================
-   CONTACT FORM
+   CONTACT US FORM
+   Existing Google Sheets integration preserved.
 ========================================================= */
 
 const scriptURL =
@@ -155,79 +119,43 @@ const scriptURL =
 const form =
     document.forms["submit-to-google-sheet"];
 
-
-const msg =
-    document.getElementById("msg");
+const msg = document.getElementById("msg");
 
 
 if (form) {
+    form.addEventListener("submit", function(e) {
+        e.preventDefault();
 
-    form.addEventListener(
-        "submit",
-        function (e) {
+        if (msg) {
+            msg.innerHTML = "Sending message...";
+        }
 
-            e.preventDefault();
-
-
+        fetch(scriptURL, {
+            method: "POST",
+            body: new FormData(form)
+        })
+        .then(function() {
             if (msg) {
-
                 msg.innerHTML =
-                    "Sending message...";
-
+                    "Message sent successfully ✓";
             }
 
+            form.reset();
 
-            fetch(
-                scriptURL,
-                {
-                    method: "POST",
-                    body: new FormData(form)
-                }
-            )
-
-            .then(function (response) {
-
+            setTimeout(function() {
                 if (msg) {
-
-                    msg.innerHTML =
-                        "Message sent successfully ✓";
-
+                    msg.innerHTML = "";
                 }
+            }, 5000);
+        })
+        .catch(function(error) {
+            console.error("Error!", error.message);
 
-
-                form.reset();
-
-
-                setTimeout(function () {
-
-                    if (msg) {
-
-                        msg.innerHTML = "";
-
-                    }
-
-                }, 5000);
-
-            })
-
-            .catch(function (error) {
-
-                console.error(
-                    "Error!",
-                    error.message
-                );
-
-
-                if (msg) {
-
-                    msg.innerHTML =
-                        "Something went wrong. Please try again.";
-
-                }
-
-            });
-
-        }
-    );
-
+            if (msg) {
+                msg.innerHTML =
+                    "Something went wrong. Please try again.";
+            }
+        });
+    });
 }
+
