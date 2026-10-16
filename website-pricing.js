@@ -1,23 +1,26 @@
 
 /* ==========================================
    WEBSITE PRICING CARDS
+   Complete optimized pricing breakdown
    Maximum prices display +
-   Existing accordion functionality preserved
+   Single-open accordion preserved
 ========================================== */
 
 (() => {
     "use strict";
 
     /* ==========================================
-       FORMAT INDIAN CURRENCY
+       CURRENCY FORMATTERS
     ========================================== */
 
     const formatINR = value =>
         "₹" + Number(value).toLocaleString("en-IN");
 
+    const formatMaximum = value =>
+        `${formatINR(value)}+`;
+
     /* ==========================================
        COMMON ADDITIONAL COSTS
-       Maximum values include +
     ========================================== */
 
     const commonExtra = [
@@ -29,6 +32,13 @@
 
     /* ==========================================
        PRICING DATA
+
+       Format:
+       [Feature / Module, Minimum, Maximum]
+
+       Institute Management System:
+       Minimum = ₹50,000
+       Maximum = ₹1,50,000+
     ========================================== */
 
     const pricingData = [
@@ -37,10 +47,12 @@
             min: 5000,
             max: 15000,
             rows: [
-                ["Responsive page design and layout", 2500, 6000],
-                ["Hero section, content sections and CTA", 1500, 4000],
+                ["Responsive layout and page structure", 2000, 6000],
+                ["Hero section, headline and CTA", 1000, 2500],
+                ["Content sections and visual styling", 1000, 2000],
                 ["Contact form and basic validation", 1000, 2500],
-                ["Mobile responsiveness and testing", 0, 2500]
+                ["Mobile optimization and cross-device testing", 0, 1500],
+                ["Basic SEO and performance checks", 0, 500]
             ]
         },
 
@@ -49,10 +61,12 @@
             min: 3000,
             max: 10000,
             rows: [
-                ["Home / introduction section", 1000, 2500],
-                ["Projects and skills sections", 1000, 3000],
-                ["Contact form and social links", 500, 2000],
-                ["Responsive design and deployment setup", 500, 2500]
+                ["Home page and personal introduction", 800, 2000],
+                ["About section and profile information", 500, 1000],
+                ["Projects and skills showcase", 700, 2500],
+                ["Education and experience sections", 400, 1200],
+                ["Contact form and social links", 300, 1500],
+                ["Responsive design and deployment setup", 300, 1800]
             ]
         },
 
@@ -61,10 +75,12 @@
             min: 5000,
             max: 15000,
             rows: [
-                ["Custom UI and responsive layout", 1500, 4000],
-                ["Projects, experience and skills sections", 1500, 4000],
-                ["Contact form and integrations", 1000, 3000],
-                ["SEO basics, testing and deployment", 1000, 4000]
+                ["Custom UI design and responsive layout", 1500, 4000],
+                ["About, skills and technology stack", 700, 1500],
+                ["Projects and project detail sections", 1000, 3000],
+                ["Experience, education and achievements", 700, 2000],
+                ["Contact form and social integrations", 500, 2000],
+                ["SEO, performance testing and deployment", 600, 2500]
             ]
         },
 
@@ -73,11 +89,13 @@
             min: 8000,
             max: 40000,
             rows: [
-                ["Home and company pages", 2500, 8000],
-                ["Services and contact pages", 2000, 7000],
-                ["Forms, map and social links", 1500, 6000],
-                ["Responsive design, SEO basics and testing", 2000, 9000],
-                ["Optional CMS / editable content", 0, 10000]
+                ["Homepage and company introduction", 2000, 6000],
+                ["About, team and company profile pages", 1000, 5000],
+                ["Services and individual service pages", 1500, 7000],
+                ["Contact form, map and social links", 1000, 5000],
+                ["Testimonials, gallery and CTA sections", 1000, 4000],
+                ["CMS / editable content management", 1000, 7000],
+                ["Responsive design, SEO and deployment", 500, 6000]
             ]
         },
 
@@ -86,42 +104,71 @@
             min: 10000,
             max: 30000,
             rows: [
-                ["Public pages and institute information", 3000, 7000],
-                ["Courses, faculty and notices", 2500, 7000],
-                ["Admission / enquiry form", 2000, 6000],
-                ["Admin content management", 1500, 6000],
-                ["Responsive design and deployment", 1000, 4000]
+                ["Homepage and institute information", 2000, 5000],
+                ["About, faculty and infrastructure pages", 1500, 4000],
+                ["Courses, batches and fee information", 1500, 4000],
+                ["Admission and enquiry forms", 1500, 4000],
+                ["Notices, events and announcements", 1000, 3000],
+                ["Admin content management", 1500, 5000],
+                ["Responsive design, SEO and deployment", 1000, 5000]
             ]
         },
 
+        /* ======================================
+           INSTITUTE MANAGEMENT SYSTEM (ERP)
+           Optimized and merged feature rows
+        ====================================== */
+
         {
             name: "Institute Management System (ERP)",
-            min: 157000,
-            max: 392000,
+            min: 50000,
+            max: 150000,
             rows: [
-                ["Landing page / Public website", 5000, 15000],
-                ["Admission form + Razorpay + confirmation emails + receipt", 8000, 20000],
-                ["Admin dashboard, summary cards and analytics", 8000, 18000],
-                ["Admin home page customization", 4000, 10000],
-                ["Student management, auto admission number and profiles", 10000, 25000],
-                ["Student payments, installments, due dates and receipts", 12000, 30000],
-                ["Course management", 4000, 10000],
-                ["Student attendance management", 6000, 15000],
-                ["Biometric attendance device integration", 10000, 25000],
-                ["Automatic absent emails and holiday management", 5000, 12000],
-                ["Online/offline payment and revenue management", 7000, 18000],
-                ["Fee due reports and automatic/manual reminders", 7000, 18000],
-                ["Faculty management", 5000, 12000],
-                ["Faculty biometric attendance and salary calculation", 10000, 25000],
-                ["Feedback management", 3000, 7000],
-                ["Notice management", 3000, 7000],
-                ["Institute settings: logo, address, map, email and links", 4000, 10000],
-                ["Student login and complete student portal", 12000, 30000],
-                ["Teacher login and complete teacher portal", 12000, 30000],
-                ["Admin admission/payment notifications", 3000, 8000],
-                ["Student notifications for attendance, assignments and marks", 4000, 10000],
-                ["Backend APIs, database, authentication and role permissions", 10000, 25000],
-                ["Deployment, production configuration, testing and bug fixes", 5000, 12000]
+                [
+                    "Public website, institute information and admission enquiries",
+                    5000,
+                    16000
+                ],
+                [
+                    "Student records, courses, batches and academic management",
+                    6500,
+                    19000
+                ],
+                [
+                    "Fee management, installments, due dates and receipts",
+                    5000,
+                    15000
+                ],
+                [
+                    "Attendance management and attendance reports",
+                    3000,
+                    10000
+                ],
+                [
+                    "Admin dashboard, summaries and reports",
+                    3000,
+                    10000
+                ],
+                [
+                    "Student and teacher login portals",
+                    9000,
+                    22000
+                ],
+                [
+                    "Notifications, email alerts, backend APIs, database and role-based access",
+                    10500,
+                    32000
+                ],
+                [
+                    "Biometric attendance and payment gateway integrations",
+                    5000,
+                    20000
+                ],
+                [
+                    "Testing, deployment and production setup",
+                    3000,
+                    6000
+                ]
             ]
         },
 
@@ -130,11 +177,14 @@
             min: 20000,
             max: 80000,
             rows: [
-                ["Storefront and product listing pages", 5000, 15000],
-                ["Product details, categories and search/filter", 4000, 12000],
-                ["Cart and checkout flow", 4000, 12000],
-                ["Payment gateway integration", 4000, 12000],
-                ["Admin product/order management", 3000, 18000]
+                ["Storefront design and homepage", 3000, 10000],
+                ["Product catalogue and product detail pages", 4000, 12000],
+                ["Categories, search and product filters", 2500, 8000],
+                ["Shopping cart and checkout flow", 3000, 10000],
+                ["Payment gateway integration", 3000, 10000],
+                ["Order management and customer accounts", 2000, 8000],
+                ["Admin product and inventory management", 1500, 10000],
+                ["Shipping, testing and deployment", 1000, 12000]
             ]
         },
 
@@ -143,11 +193,13 @@
             min: 8000,
             max: 25000,
             rows: [
-                ["Home page and restaurant information", 2000, 6000],
-                ["Menu and gallery", 2000, 5000],
-                ["Reservation / enquiry form", 1500, 5000],
-                ["Map, contact and social links", 1000, 3000],
-                ["Responsive design and deployment", 1500, 6000]
+                ["Homepage and restaurant information", 1500, 4000],
+                ["Menu, categories and pricing display", 1500, 4000],
+                ["Food gallery and featured items", 1000, 3000],
+                ["Reservation and enquiry forms", 1500, 5000],
+                ["Map, opening hours and contact details", 1000, 3000],
+                ["Social links and customer testimonials", 500, 2000],
+                ["Responsive design, SEO and deployment", 1000, 4000]
             ]
         },
 
@@ -156,11 +208,13 @@
             min: 15000,
             max: 50000,
             rows: [
-                ["Destination / property pages and gallery", 4000, 12000],
-                ["Packages, rooms or tour listings", 3000, 10000],
-                ["Booking / enquiry forms", 3000, 10000],
-                ["Admin content management", 2500, 8000],
-                ["Maps, responsive UI and deployment", 2500, 10000]
+                ["Homepage and property / destination pages", 3000, 8000],
+                ["Room, package or tour listings", 3000, 9000],
+                ["Gallery and detailed information pages", 1500, 5000],
+                ["Booking and enquiry forms", 2500, 9000],
+                ["Availability and booking management", 1500, 7000],
+                ["Admin content management", 1500, 6000],
+                ["Maps, responsive design and deployment", 2000, 6000]
             ]
         },
 
@@ -169,11 +223,13 @@
             min: 10000,
             max: 35000,
             rows: [
-                ["Product / medicine catalogue", 3000, 9000],
-                ["Search and category filters", 2000, 6000],
-                ["Enquiry / order request flow", 2000, 7000],
-                ["Admin inventory/content management", 2000, 8000],
-                ["Responsive design and deployment", 1000, 5000]
+                ["Homepage and pharmacy information", 1500, 4000],
+                ["Medicine and product catalogue", 2500, 7000],
+                ["Search, categories and filters", 1500, 5000],
+                ["Product detail and availability display", 1000, 4000],
+                ["Enquiry and order request forms", 1500, 5000],
+                ["Admin inventory and content management", 1000, 6000],
+                ["Responsive design, testing and deployment", 1000, 4000]
             ]
         },
 
@@ -182,11 +238,13 @@
             min: 15000,
             max: 50000,
             rows: [
-                ["Doctor, department and service pages", 4000, 12000],
-                ["Appointment request system", 3000, 10000],
-                ["Patient information and contact pages", 2500, 8000],
-                ["Admin management and notifications", 3000, 10000],
-                ["Responsive design, maps and deployment", 2500, 10000]
+                ["Homepage and hospital information", 2000, 6000],
+                ["Doctor profiles and department pages", 3000, 8000],
+                ["Services, facilities and treatment pages", 2000, 7000],
+                ["Appointment request and enquiry forms", 2500, 8000],
+                ["Contact details, maps and visiting hours", 1000, 3000],
+                ["Admin content and appointment management", 2000, 8000],
+                ["Notifications, responsive design and deployment", 2500, 10000]
             ]
         },
 
@@ -195,11 +253,13 @@
             min: 8000,
             max: 25000,
             rows: [
-                ["Home and professional profile", 2000, 6000],
-                ["Services and resources pages", 2000, 5000],
-                ["Client enquiry / appointment form", 1500, 5000],
-                ["Document enquiry / upload option", 1000, 4000],
-                ["Responsive design and deployment", 1500, 5000]
+                ["Homepage and professional profile", 1500, 4000],
+                ["Services and practice-area pages", 1500, 4000],
+                ["About, qualifications and experience", 1000, 3000],
+                ["Client enquiry and appointment forms", 1500, 4000],
+                ["Resources, FAQs and document information", 1000, 3000],
+                ["Optional document upload / enquiry workflow", 500, 3000],
+                ["Responsive design, SEO and deployment", 1000, 4000]
             ]
         },
 
@@ -208,11 +268,13 @@
             min: 15000,
             max: 50000,
             rows: [
-                ["Property listings and detail pages", 4000, 12000],
-                ["Search, filters and location information", 3000, 10000],
-                ["Enquiry / lead capture forms", 2500, 8000],
-                ["Admin property management", 3000, 10000],
-                ["Responsive design and deployment", 2500, 10000]
+                ["Homepage and property showcase", 2000, 6000],
+                ["Property listings and detail pages", 3000, 9000],
+                ["Search, filters and location information", 2500, 8000],
+                ["Property images and gallery", 1500, 4000],
+                ["Enquiry forms and lead capture", 2000, 6000],
+                ["Admin property and listing management", 2000, 9000],
+                ["Responsive design, maps and deployment", 2000, 8000]
             ]
         },
 
@@ -221,11 +283,13 @@
             min: 8000,
             max: 25000,
             rows: [
-                ["Article listing and detail pages", 2000, 6000],
-                ["Categories, tags and search", 1500, 5000],
-                ["Admin article publishing panel", 2000, 7000],
-                ["SEO basics and sharing options", 1000, 3000],
-                ["Responsive design and deployment", 1500, 4000]
+                ["Homepage and article listing", 1500, 4000],
+                ["Article detail pages and content layout", 1500, 4000],
+                ["Categories, tags and search", 1000, 3000],
+                ["Admin article publishing panel", 1500, 5000],
+                ["Image uploads and featured content", 800, 2500],
+                ["SEO metadata and social sharing", 700, 2500],
+                ["Responsive design, testing and deployment", 1000, 4000]
             ]
         },
 
@@ -234,11 +298,13 @@
             min: 15000,
             max: 50000,
             rows: [
-                ["Service and availability pages", 3000, 9000],
-                ["Booking form and schedule selection", 4000, 12000],
-                ["Admin booking management", 3000, 10000],
-                ["Email notifications and status updates", 2000, 7000],
-                ["Responsive design, testing and deployment", 3000, 12000]
+                ["Service listing and detail pages", 2000, 6000],
+                ["Availability and schedule selection", 3000, 9000],
+                ["Booking form and customer information", 2500, 8000],
+                ["Admin booking and schedule management", 3000, 10000],
+                ["Email notifications and booking status", 1500, 5000],
+                ["Booking history and basic reporting", 1000, 4000],
+                ["Responsive design, testing and deployment", 2000, 8000]
             ]
         },
 
@@ -247,11 +313,14 @@
             min: 25000,
             max: 100000,
             rows: [
-                ["Student/teacher authentication and roles", 4000, 12000],
-                ["Course and lesson management", 5000, 18000],
-                ["Study materials and assignment uploads", 4000, 15000],
-                ["Progress, quiz or marks module", 4000, 18000],
-                ["Admin panel, notifications and deployment", 8000, 37000]
+                ["Student and teacher authentication", 3000, 10000],
+                ["Course catalogue and course detail pages", 3000, 10000],
+                ["Lesson and learning-material management", 4000, 15000],
+                ["Assignment upload and submission workflow", 3000, 10000],
+                ["Quizzes, marks and progress tracking", 4000, 15000],
+                ["Student and teacher dashboards", 3000, 12000],
+                ["Admin management and notifications", 2500, 10000],
+                ["Testing, deployment and integrations", 2500, 18000]
             ]
         },
 
@@ -260,11 +329,14 @@
             min: 25000,
             max: 100000,
             rows: [
-                ["Job listings and search filters", 5000, 15000],
-                ["Candidate registration and profiles", 5000, 15000],
-                ["Employer accounts and job posting", 5000, 20000],
-                ["Applications and status management", 5000, 20000],
-                ["Admin dashboard, notifications and deployment", 5000, 30000]
+                ["Homepage and job listing pages", 3000, 10000],
+                ["Job search and filtering", 3000, 10000],
+                ["Candidate registration and profiles", 4000, 12000],
+                ["Employer accounts and job posting", 4000, 15000],
+                ["Applications and status management", 4000, 15000],
+                ["Admin moderation and user management", 3000, 12000],
+                ["Email alerts and notifications", 1500, 8000],
+                ["Testing, deployment and responsive UI", 2500, 18000]
             ]
         },
 
@@ -273,11 +345,14 @@
             min: 30000,
             max: 120000,
             rows: [
-                ["Authentication and role permissions", 4000, 12000],
-                ["Customer / product / inventory records", 7000, 25000],
-                ["Transactions, stock or task workflows", 7000, 25000],
-                ["Reports, search and data export", 5000, 20000],
-                ["Admin dashboard, testing and deployment", 7000, 38000]
+                ["Authentication and role-based permissions", 3000, 10000],
+                ["Customer and supplier records", 4000, 12000],
+                ["Product and inventory management", 5000, 18000],
+                ["Stock movement and transaction workflows", 5000, 18000],
+                ["Search, filters and data management", 3000, 10000],
+                ["Reports, analytics and data export", 4000, 15000],
+                ["Admin dashboard and notifications", 3000, 12000],
+                ["Testing, deployment and API integration", 3000, 25000]
             ]
         },
 
@@ -286,11 +361,13 @@
             min: 12000,
             max: 50000,
             rows: [
-                ["Dashboard layout and summary cards", 3000, 10000],
-                ["Charts, metrics and reports", 3000, 12000],
-                ["Tables, search and filters", 2500, 10000],
-                ["Authentication and role access", 1500, 8000],
-                ["API integration, testing and deployment", 2000, 10000]
+                ["Dashboard layout and summary cards", 2500, 8000],
+                ["Charts, graphs and key metrics", 2500, 9000],
+                ["Data tables, search and filters", 2000, 7000],
+                ["Authentication and role access", 1500, 6000],
+                ["API and database integration", 1500, 8000],
+                ["Reports, exports and data views", 1000, 5000],
+                ["Responsive design, testing and deployment", 1000, 7000]
             ]
         },
 
@@ -299,11 +376,14 @@
             min: 30000,
             max: 200000,
             rows: [
-                ["Requirements analysis and UI planning", 3000, 15000],
-                ["Frontend screens and responsive UI", 7000, 40000],
-                ["Backend APIs and database", 8000, 50000],
-                ["Authentication, permissions and integrations", 5000, 40000],
-                ["Testing, deployment and handover", 7000, 55000]
+                ["Requirements analysis and technical planning", 3000, 12000],
+                ["UI design and responsive frontend", 7000, 35000],
+                ["Backend APIs and database models", 6000, 35000],
+                ["Authentication and role permissions", 4000, 18000],
+                ["Core business features and workflows", 5000, 40000],
+                ["Third-party API and service integrations", 2000, 20000],
+                ["Testing, security checks and bug fixing", 1500, 15000],
+                ["Deployment, documentation and handover", 1500, 25000]
             ]
         },
 
@@ -312,16 +392,19 @@
             min: 5000,
             max: 25000,
             rows: [
-                ["UI review and design refresh", 1500, 6000],
-                ["Page layout and styling updates", 1500, 7000],
+                ["Existing UI review and design refresh", 1000, 4000],
+                ["Homepage and page-layout improvements", 1500, 6000],
+                ["Typography, colors and component styling", 800, 3000],
                 ["Mobile responsiveness and accessibility fixes", 1000, 5000],
-                ["Content/layout migration and testing", 1000, 4000]
+                ["Content and image migration", 300, 2000],
+                ["Performance and SEO improvements", 200, 2000],
+                ["Cross-browser testing and deployment", 200, 3000]
             ]
         }
     ];
 
     /* ==========================================
-       PRICING LIST ELEMENT
+       PRICING LIST
     ========================================== */
 
     const list = document.getElementById("websitePricingList");
@@ -330,14 +413,17 @@
         return;
     }
 
+    /* Prevent duplicate cards if script runs again */
+
+    list.replaceChildren();
+
     /* ==========================================
        CREATE PRICE TABLE
-       Every numeric maximum gets +
+       Every maximum value displays +
     ========================================== */
 
     function makeTable(rows, extra = false) {
         const table = document.createElement("table");
-
         table.className = "website-pricing-table";
 
         const thead = document.createElement("thead");
@@ -349,9 +435,7 @@
             "Maximum"
         ].forEach(label => {
             const th = document.createElement("th");
-
             th.textContent = label;
-
             header.appendChild(th);
         });
 
@@ -363,21 +447,21 @@
         rows.forEach(row => {
             const tr = document.createElement("tr");
 
-            [row[0], row[1], row[2]].forEach((value, index) => {
+            row.forEach((value, index) => {
                 const td = document.createElement("td");
 
-                if (!extra && index === 1) {
-                    /* Minimum price */
-
-                    td.textContent = formatINR(value);
-                } else if (!extra && index === 2) {
-                    /* Maximum price: always append + */
-
-                    td.textContent = `${formatINR(value)}+`;
-                } else {
-                    /* Text values and common additional costs */
-
+                if (index === 0 || extra) {
                     td.textContent = value;
+                } else if (index === 1) {
+                    td.textContent =
+                        typeof value === "number"
+                            ? formatINR(value)
+                            : value;
+                } else {
+                    td.textContent =
+                        typeof value === "number"
+                            ? formatMaximum(value)
+                            : value;
                 }
 
                 tr.appendChild(td);
@@ -392,14 +476,13 @@
     }
 
     /* ==========================================
-       ADD TABLE TO A CONTAINER
+       ADD TABLE TO CONTAINER
     ========================================== */
 
     function addTable(parent, rows, extra = false) {
         const wrap = document.createElement("div");
 
         wrap.className = "website-pricing-table-wrap";
-
         wrap.appendChild(makeTable(rows, extra));
 
         parent.appendChild(wrap);
@@ -411,12 +494,9 @@
 
     pricingData.forEach((project, index) => {
         const item = document.createElement("article");
-
         item.className = "website-pricing-item";
 
-        /* ======================================
-           CARD BUTTON
-        ====================================== */
+        /* Card button */
 
         const button = document.createElement("button");
 
@@ -425,37 +505,28 @@
         button.id = `pricing-toggle-${index}`;
 
         button.setAttribute("aria-expanded", "false");
-
         button.setAttribute(
             "aria-controls",
             `pricing-details-${index}`
         );
 
-        /* ======================================
-           WEBSITE NAME AND PRICE RANGE
-        ====================================== */
+        /* Website name and price */
 
         const textWrap = document.createElement("span");
 
         const name = document.createElement("span");
-
         name.className = "website-pricing-name";
         name.textContent = project.name;
 
         const range = document.createElement("span");
-
         range.className = "website-pricing-range";
 
-        /* Maximum range always includes + */
-
         range.textContent =
-            `${formatINR(project.min)} – ${formatINR(project.max)}+`;
+            `${formatINR(project.min)} – ${formatMaximum(project.max)}`;
 
         textWrap.append(name, range);
 
-        /* ======================================
-           EXPAND ICON
-        ====================================== */
+        /* Expand icon */
 
         const chevron = document.createElement("span");
 
@@ -465,9 +536,7 @@
 
         button.append(textWrap, chevron);
 
-        /* ======================================
-           EXPANDED DETAILS
-        ====================================== */
+        /* Expanded details */
 
         const details = document.createElement("div");
 
@@ -475,43 +544,29 @@
         details.id = `pricing-details-${index}`;
 
         details.setAttribute("role", "region");
-
-        details.setAttribute(
-            "aria-labelledby",
-            button.id
-        );
+        details.setAttribute("aria-labelledby", button.id);
 
         details.hidden = true;
 
-        /* ======================================
-           FEATURE-WISE PRICING
-        ====================================== */
+        /* Feature-wise pricing */
 
         addTable(details, project.rows);
 
-        /* ======================================
-           ADDITIONAL COST HEADING
-        ====================================== */
+        /* Additional cost heading */
 
         const subheading = document.createElement("h3");
 
         subheading.className = "website-pricing-subheading";
-
         subheading.textContent =
             "Domain, Hosting, Maintenance & Code Ownership";
 
         details.appendChild(subheading);
 
-        /* ======================================
-           ADDITIONAL COST TABLE
-        ====================================== */
+        /* Common additional costs */
 
         addTable(details, commonExtra, true);
 
-        /* ======================================
-           ESTIMATED DEVELOPMENT TOTAL
-           Maximum always includes +
-        ====================================== */
+        /* Development price summary */
 
         const total = document.createElement("div");
 
@@ -519,13 +574,11 @@
 
         total.textContent =
             `Estimated development: ${formatINR(project.min)} – ` +
-            `${formatINR(project.max)}+`;
+            formatMaximum(project.max);
 
         details.appendChild(total);
 
-        /* ======================================
-           ADDITIONAL INFORMATION
-        ====================================== */
+        /* Disclaimer */
 
         const note = document.createElement("p");
 
@@ -534,13 +587,13 @@
         note.textContent =
             "*Free hosting depends on provider limits and availability. " +
             "Domain, hosting and maintenance are separate from the " +
-            "development estimate. Code ownership terms should be defined " +
-            "in the project agreement.";
+            "development estimate. Optional modules may cost extra. " +
+            "Final pricing depends on the confirmed project scope.";
 
         details.appendChild(note);
 
         /* ======================================
-           CLICK TO EXPAND / COLLAPSE
+           ACCORDION FUNCTIONALITY
         ====================================== */
 
         button.addEventListener("click", () => {
@@ -563,7 +616,7 @@
                 }
             });
 
-            /* Toggle the selected card */
+            /* Open or close the selected card */
 
             button.setAttribute(
                 "aria-expanded",
@@ -573,12 +626,7 @@
             details.hidden = !willOpen;
         });
 
-        /* ======================================
-           APPEND CARD
-        ====================================== */
-
         item.append(button, details);
-
         list.appendChild(item);
     });
 
