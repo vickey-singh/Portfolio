@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#080808">
+    <meta name="description" content="Explore website development prices and detailed project cost breakdowns.">
+
+    <title>Website Pricing | Let's Build Something Great</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="website-pricing.css">
+</head>
+
+<body>
+
+    <main class="pricing-page">
+
+        <div class="pricing-container">
+
+            <a
+                class="back-home"
+                href="index.html"
+                aria-label="Back to home"
+            >
+                <span aria-hidden="true">←</span>
+                Home
+            </a>
+
+            <header class="pricing-hero">
+
+                <p class="eyebrow">
+                    <span></span>
+                    WEBSITE DEVELOPMENT PRICING
+                </p>
+
+                <h1>
+                    Let’s Build Something
+                    <span>Great.</span>
+                </h1>
+
+                <p class="hero-description">
+                    Explore website types and estimated development costs.
+                    Select any card to see the feature-wise breakdown, plus
+                    domain, hosting, maintenance and source-code ownership costs.
+                </p>
+
+                <div class="hero-rule">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+            </header>
+
+            <section
+                class="pricing-section"
+                aria-labelledby="pricingHeading"
+            >
+
+                <div class="section-topline">
+
+                    <div>
+                        <p class="section-kicker">
+                            CLEAR. SIMPLE. TRANSPARENT.
+                        </p>
+
+                        <h2 id="pricingHeading">
+                            Choose your project type
+                        </h2>
+                    </div>
+
+                    <p class="section-side-note">
+                        Tap a card for the full breakdown
+                        <span aria-hidden="true">↘</span>
+                    </p>
+
+                </div>
+
+                <div
+                    id="websitePricingList"
+                    class="website-pricing-list"
+                    aria-live="polite"
+                ></div>
+
+                <p class="pricing-disclaimer">
+                    All amounts are estimates in INR. Final development pricing
+                    depends on scope, complexity, integrations and deployment
+                    requirements. Domain, hosting, maintenance and source-code
+                    ownership are listed separately and are not included in
+                    the development estimate.
+                </p>
+
+            </section>
+
+            <footer class="pricing-footer">
+                <span class="footer-dot"></span>
+                Built around your project goals.
+            </footer>
+
+        </div>
+
+    </main>
+
+    <script src="website-pricing.js"></script>
+
+</body>
+</html>
