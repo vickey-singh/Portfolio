@@ -1,17 +1,35 @@
-/* Website pricing cards — static hover styling, no animations. */
+
+/* ==========================================
+   WEBSITE PRICING CARDS
+   Maximum prices display +
+   Existing accordion functionality preserved
+========================================== */
 
 (() => {
     "use strict";
 
+    /* ==========================================
+       FORMAT INDIAN CURRENCY
+    ========================================== */
+
     const formatINR = value =>
         "₹" + Number(value).toLocaleString("en-IN");
 
+    /* ==========================================
+       COMMON ADDITIONAL COSTS
+       Maximum values include +
+    ========================================== */
+
     const commonExtra = [
-        ["Domain registration", "₹800/year", "₹2,000/year"],
+        ["Domain registration", "₹800/year", "₹2,000+/year"],
         ["Hosting, backend server and database", "₹0/year*", "₹30,000+/year"],
-        ["Maintenance, bug fixes and technical support", "₹3,000/month", "₹10,000/month"],
-        ["Source-code handover / exclusive ownership arrangement", "₹10,000", "₹30,000 one-time"]
+        ["Maintenance, bug fixes and technical support", "₹3,000/month", "₹10,000+/month"],
+        ["Source-code handover / exclusive ownership arrangement", "₹10,000", "₹30,000+ one-time"]
     ];
+
+    /* ==========================================
+       PRICING DATA
+    ========================================== */
 
     const pricingData = [
         {
@@ -25,6 +43,7 @@
                 ["Mobile responsiveness and testing", 0, 2500]
             ]
         },
+
         {
             name: "Personal Portfolio Website",
             min: 3000,
@@ -36,6 +55,7 @@
                 ["Responsive design and deployment setup", 500, 2500]
             ]
         },
+
         {
             name: "Developer / Professional Portfolio",
             min: 5000,
@@ -47,6 +67,7 @@
                 ["SEO basics, testing and deployment", 1000, 4000]
             ]
         },
+
         {
             name: "Business / Corporate Website",
             min: 8000,
@@ -59,6 +80,7 @@
                 ["Optional CMS / editable content", 0, 10000]
             ]
         },
+
         {
             name: "School / Coaching Website",
             min: 10000,
@@ -71,6 +93,7 @@
                 ["Responsive design and deployment", 1000, 4000]
             ]
         },
+
         {
             name: "Institute Management System (EduPortal type)",
             min: 157000,
@@ -101,6 +124,7 @@
                 ["Deployment, production configuration, testing and bug fixes", 5000, 12000]
             ]
         },
+
         {
             name: "E-commerce Website",
             min: 20000,
@@ -113,6 +137,7 @@
                 ["Admin product/order management", 3000, 18000]
             ]
         },
+
         {
             name: "Restaurant / Cafe Website",
             min: 8000,
@@ -125,6 +150,7 @@
                 ["Responsive design and deployment", 1500, 6000]
             ]
         },
+
         {
             name: "Hotel / Travel Website",
             min: 15000,
@@ -137,6 +163,7 @@
                 ["Maps, responsive UI and deployment", 2500, 10000]
             ]
         },
+
         {
             name: "Medical Store / Pharmacy Website",
             min: 10000,
@@ -149,6 +176,7 @@
                 ["Responsive design and deployment", 1000, 5000]
             ]
         },
+
         {
             name: "Clinic / Hospital Website",
             min: 15000,
@@ -161,6 +189,7 @@
                 ["Responsive design, maps and deployment", 2500, 10000]
             ]
         },
+
         {
             name: "CA / Accountant Website",
             min: 8000,
@@ -173,6 +202,7 @@
                 ["Responsive design and deployment", 1500, 5000]
             ]
         },
+
         {
             name: "Real Estate Website",
             min: 15000,
@@ -185,6 +215,7 @@
                 ["Responsive design and deployment", 2500, 10000]
             ]
         },
+
         {
             name: "Blog / News Website",
             min: 8000,
@@ -197,6 +228,7 @@
                 ["Responsive design and deployment", 1500, 4000]
             ]
         },
+
         {
             name: "Booking / Appointment System",
             min: 15000,
@@ -209,6 +241,7 @@
                 ["Responsive design, testing and deployment", 3000, 12000]
             ]
         },
+
         {
             name: "Online Learning Platform",
             min: 25000,
@@ -221,6 +254,7 @@
                 ["Admin panel, notifications and deployment", 8000, 37000]
             ]
         },
+
         {
             name: "Job Portal / Recruitment Website",
             min: 25000,
@@ -233,6 +267,7 @@
                 ["Admin dashboard, notifications and deployment", 5000, 30000]
             ]
         },
+
         {
             name: "CRM / Inventory Management System",
             min: 30000,
@@ -245,6 +280,7 @@
                 ["Admin dashboard, testing and deployment", 7000, 38000]
             ]
         },
+
         {
             name: "Admin Dashboard / Analytics Panel",
             min: 12000,
@@ -257,6 +293,7 @@
                 ["API integration, testing and deployment", 2000, 10000]
             ]
         },
+
         {
             name: "Custom MERN Web Application",
             min: 30000,
@@ -269,6 +306,7 @@
                 ["Testing, deployment and handover", 7000, 55000]
             ]
         },
+
         {
             name: "Existing Website Redesign",
             min: 5000,
@@ -282,6 +320,10 @@
         }
     ];
 
+    /* ==========================================
+       PRICING LIST ELEMENT
+    ========================================== */
+
     const list = document.getElementById("websitePricingList");
 
     if (!list) {
@@ -290,10 +332,12 @@
 
     /* ==========================================
        CREATE PRICE TABLE
+       Every numeric maximum gets +
     ========================================== */
 
     function makeTable(rows, extra = false) {
         const table = document.createElement("table");
+
         table.className = "website-pricing-table";
 
         const thead = document.createElement("thead");
@@ -305,7 +349,9 @@
             "Maximum"
         ].forEach(label => {
             const th = document.createElement("th");
+
             th.textContent = label;
+
             header.appendChild(th);
         });
 
@@ -320,10 +366,19 @@
             [row[0], row[1], row[2]].forEach((value, index) => {
                 const td = document.createElement("td");
 
-                td.textContent =
-                    !extra && index > 0
-                        ? formatINR(value)
-                        : value;
+                if (!extra && index === 1) {
+                    /* Minimum price */
+
+                    td.textContent = formatINR(value);
+                } else if (!extra && index === 2) {
+                    /* Maximum price: always append + */
+
+                    td.textContent = `${formatINR(value)}+`;
+                } else {
+                    /* Text values and common additional costs */
+
+                    td.textContent = value;
+                }
 
                 tr.appendChild(td);
             });
@@ -344,6 +399,7 @@
         const wrap = document.createElement("div");
 
         wrap.className = "website-pricing-table-wrap";
+
         wrap.appendChild(makeTable(rows, extra));
 
         parent.appendChild(wrap);
@@ -358,7 +414,9 @@
 
         item.className = "website-pricing-item";
 
-        /* Card button */
+        /* ======================================
+           CARD BUTTON
+        ====================================== */
 
         const button = document.createElement("button");
 
@@ -367,12 +425,15 @@
         button.id = `pricing-toggle-${index}`;
 
         button.setAttribute("aria-expanded", "false");
+
         button.setAttribute(
             "aria-controls",
             `pricing-details-${index}`
         );
 
-        /* Website name and price */
+        /* ======================================
+           WEBSITE NAME AND PRICE RANGE
+        ====================================== */
 
         const textWrap = document.createElement("span");
 
@@ -385,13 +446,16 @@
 
         range.className = "website-pricing-range";
 
+        /* Maximum range always includes + */
+
         range.textContent =
-            `${formatINR(project.min)} – ${formatINR(project.max)}` +
-            `${project.max >= 200000 ? "+" : ""}`;
+            `${formatINR(project.min)} – ${formatINR(project.max)}+`;
 
         textWrap.append(name, range);
 
-        /* Expand icon */
+        /* ======================================
+           EXPAND ICON
+        ====================================== */
 
         const chevron = document.createElement("span");
 
@@ -401,7 +465,9 @@
 
         button.append(textWrap, chevron);
 
-        /* Expanded details */
+        /* ======================================
+           EXPANDED DETAILS
+        ====================================== */
 
         const details = document.createElement("div");
 
@@ -409,15 +475,23 @@
         details.id = `pricing-details-${index}`;
 
         details.setAttribute("role", "region");
-        details.setAttribute("aria-labelledby", button.id);
+
+        details.setAttribute(
+            "aria-labelledby",
+            button.id
+        );
 
         details.hidden = true;
 
-        /* Feature-wise pricing */
+        /* ======================================
+           FEATURE-WISE PRICING
+        ====================================== */
 
         addTable(details, project.rows);
 
-        /* Additional cost heading */
+        /* ======================================
+           ADDITIONAL COST HEADING
+        ====================================== */
 
         const subheading = document.createElement("h3");
 
@@ -428,11 +502,16 @@
 
         details.appendChild(subheading);
 
-        /* Domain, hosting, maintenance and code ownership */
+        /* ======================================
+           ADDITIONAL COST TABLE
+        ====================================== */
 
         addTable(details, commonExtra, true);
 
-        /* Development price summary */
+        /* ======================================
+           ESTIMATED DEVELOPMENT TOTAL
+           Maximum always includes +
+        ====================================== */
 
         const total = document.createElement("div");
 
@@ -440,12 +519,13 @@
 
         total.textContent =
             `Estimated development: ${formatINR(project.min)} – ` +
-            `${formatINR(project.max)}` +
-            `${project.max >= 200000 ? "+" : ""}`;
+            `${formatINR(project.max)}+`;
 
         details.appendChild(total);
 
-        /* Additional information */
+        /* ======================================
+           ADDITIONAL INFORMATION
+        ====================================== */
 
         const note = document.createElement("p");
 
@@ -459,9 +539,9 @@
 
         details.appendChild(note);
 
-        /* ==========================================
+        /* ======================================
            CLICK TO EXPAND / COLLAPSE
-        ========================================== */
+        ====================================== */
 
         button.addEventListener("click", () => {
             const willOpen =
@@ -469,7 +549,9 @@
 
             /* Close all other cards */
 
-            list.querySelectorAll(".website-pricing-toggle").forEach(other => {
+            list.querySelectorAll(
+                ".website-pricing-toggle"
+            ).forEach(other => {
                 other.setAttribute("aria-expanded", "false");
 
                 const panel = document.getElementById(
@@ -490,6 +572,10 @@
 
             details.hidden = !willOpen;
         });
+
+        /* ======================================
+           APPEND CARD
+        ====================================== */
 
         item.append(button, details);
 
