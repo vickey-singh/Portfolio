@@ -95,7 +95,7 @@
         },
 
         {
-            name: "Institute Management System (EduPortal type)",
+            name: "Institute Management System (ERP)",
             min: 157000,
             max: 392000,
             rows: [
